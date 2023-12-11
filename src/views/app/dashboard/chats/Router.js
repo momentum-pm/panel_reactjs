@@ -21,12 +21,12 @@ class Router extends RemoteStoreView {
   getOkView() {
     let path = this.props.match.path;
     return (
-      <div className={"container"}>
-        <Row className={"padding-one"}>
-          <SlaveColumn>
+      <div className={"container full-height"}>
+        <Row className={"padding-one full-height"}>
+          <SlaveColumn className={"threads-box full-height"}>
             <ThreadsView />
           </SlaveColumn>
-          <MasterColumn>
+          <MasterColumn className={" full-height"}>
             <MasterScrollableColumn>
               <Switch>
                 <Route path={path + "chats/:thread/"} component={ThreadView} />

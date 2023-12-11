@@ -17,7 +17,7 @@ class ThreadsView extends RemoteStoreView {
 
   getOkView() {
     return (
-      <ScrollableColumn className={"box"}>
+      <ScrollableColumn className={"box  full-height"}>
         <h2 className={"conversations-header"}>Threads</h2>
         <Scrollable>{this.getListView()}</Scrollable>
       </ScrollableColumn>
