@@ -37,12 +37,12 @@ export default function FooterView() {
                 />
                 <img
                   className="toolbar-logo-watermark dark-only"
-                  alt="Greenoly"
+                  alt="Momentum-AI"
                   src={watermark_dark}
                 />
                 <img
                   className="toolbar-logo-watermark light-only"
-                  alt="Greenoly"
+                  alt="Momentum-AI"
                   src={watermark_light}
                 />
               </Row>
@@ -83,7 +83,6 @@ export default function FooterView() {
             </div>
           </SlaveColumn>
           <SlaveColumn className={"padding-two-before-after"}>
-
             <h6 className={"padding-two-sides home-footer-title"}>
               اطلاعات تماس
             </h6>
@@ -96,7 +95,7 @@ export default function FooterView() {
             />
 
             <LinkIconTitleValueView
-              href={"mailto:greenolyofficial@gmail.com"}
+              href={"mailto:Momentum-AIofficial@gmail.com"}
               icon={Res.icon.email}
               title={""}
               value={Res.string.home.email_text}
@@ -109,7 +108,6 @@ export default function FooterView() {
               value={Res.string.home.address_text}
               className={"white"}
             />
-            
           </SlaveColumn>
           <SlaveColumn className={"padding-two-before-after"}>
             <h6 className={"padding-two-sides home-footer-title"}>
@@ -121,7 +119,7 @@ export default function FooterView() {
               className={"white"}
               value={"قوانین و مقررات"}
               href={
-                "https://greenoly.org/blog/posts/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA/"
+                "https://Momentum-AI.org/blog/posts/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA/"
               }
             />
             <LinkIconTitleValueView
@@ -130,30 +128,30 @@ export default function FooterView() {
               value={"درباره ما"}
               href={"/about-us"}
             />
-                        <h6 className={"padding-two-sides home-footer-title"}>
+            <h6 className={"padding-two-sides home-footer-title"}>
               {Res.string.home.in_social_media}
             </h6>
             <Row>
               <ButtonView
-                link={"https://www.instagram.com/greenoly/"}
+                link={"https://www.instagram.com/Momentum-AI/"}
                 type={BUTTON_TYPE.EXTERNAL_LINK}
                 className={"white default"}
                 icon={Res.icon.instagram}
               />
               <ButtonView
-                link={"https://t.me/greenolympiad"}
+                link={"https://t.me/Momentum-AImpiad"}
                 type={BUTTON_TYPE.EXTERNAL_LINK}
                 className={"white default"}
                 icon={Res.icon.telegram}
               />
               <ButtonView
-                link={"https://www.linkedin.com/company/greenoly/"}
+                link={"https://www.linkedin.com/company/Momentum-AI/"}
                 type={BUTTON_TYPE.EXTERNAL_LINK}
                 className={"white default"}
                 icon={Res.icon.linkedin}
               />
               <ButtonView
-                link={"https://www.youtube.com/@TheGreenOly"}
+                link={"https://www.youtube.com/@TheMomentum-AI"}
                 type={BUTTON_TYPE.EXTERNAL_LINK}
                 className={"white default"}
                 icon={Res.icon.youtube}

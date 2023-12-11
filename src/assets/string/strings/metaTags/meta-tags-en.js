@@ -1,8 +1,7 @@
 export const metaTagsEn = {
-	app_name: 'greenoly',
-	default_keywords: 'App, hiring, freelancing',
-	default_description: 'greenoly, hiring and freelancing platform',
-	default_title: 'greenoly | Hiring And Freelancing Platform',
-	getTitle: (title) => title,
-
+  app_name: "Momentum-AI",
+  default_keywords: " An AI Project Manager",
+  default_description: "Momentum-AI, An AI Project Manager",
+  default_title: "Momentum-AI |  An AI Project Manager",
+  getTitle: (title) => title,
 };

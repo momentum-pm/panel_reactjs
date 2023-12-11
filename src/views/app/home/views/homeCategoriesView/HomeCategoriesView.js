@@ -35,12 +35,12 @@ class HomeCategoriesView extends RemoteStoreView {
         <img
           className="home-categories-background"
           src={background}
-          alt={"greenoly teachers"}
+          alt={"Momentum-AI teachers"}
         />
         <img
           className="home-categories-background-2"
           src={background}
-          alt={"greenoly teachers"}
+          alt={"Momentum-AI teachers"}
         />
         <div className="home-categories-content">
           <div className={"container full-height"}>
@@ -88,7 +88,9 @@ class HomeCategoriesView extends RemoteStoreView {
                         {activeCategory.post.title}
                       </h4>
                     </Row>
-                    <p className="justify padding-two-sides">{activeCategory.description}</p>
+                    <p className="justify padding-two-sides">
+                      {activeCategory.description}
+                    </p>
                     <div className={"row"}>
                       <ButtonView
                         className={"flat link "}

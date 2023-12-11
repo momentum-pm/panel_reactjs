@@ -9,7 +9,6 @@
 
 .dark .nlanding-header {
   background: linear-gradient(-90deg, $black-dark, $black-light);
-
 }
 
 .dark .nlanding-header .button-view {
@@ -24,15 +23,15 @@
   margin: $spacing;
 }
 
-.nlanding-h1-greenoly {
+.nlanding-h1-Momentum-AI {
   font-size: 24px;
   font-family: Kenar, serif;
   color: #ff9900;
   text-shadow: 4px 4px rgba(30, 30, 30, 0.5);
 }
 
-.dark .nlanding-h1-greenoly {
-  color: $primary-dark-theme;
+.dark .nlanding-h1-Momentum-AI {
+  color: $primary;
 }
 
 .nlanding-h1-intro {
@@ -61,7 +60,6 @@
   background: rgba(0, 0, 0, 0.7);
   top: 0;
   bottom: 0;
-
 }
 
 .comming-soon p {
@@ -89,13 +87,10 @@
   stroke: $white !important;
 }
 
-
-
 .nlanding-get-started {
   width: 490px;
   margin: $spacing-four $spacing $spacing-eight;
 }
-
 
 .nlanding-get-started-text {
   color: white;
@@ -103,7 +98,6 @@
   opacity: 0.3;
   font-size: 36px !important;
   //text-shadow: 2px 2px rgba(30, 30, 30, 0.5);
-
 }
 
 .nlanding-get-started-button {
@@ -116,7 +110,6 @@
 
 .nlanding-get-started-button:hover {
   background: $secondary-darker !important;
-
 }
 
 .nlanding-get-started-button.button-view.large .icon-root {
@@ -128,9 +121,7 @@
   line-height: 48px !important;
   font-size: 13px !important;
   opacity: 0.7;
-
 }
-
 
 .nlanding-hiring-cta {
   background: $background;
@@ -180,9 +171,7 @@
 .nlanding-trusted-by-item:hover img {
   filter: grayscale(0%);
   transform: scale(1.1);
-
 }
-
 
 .n-landing-abr-container {
   position: relative;
@@ -212,7 +201,12 @@
 }
 
 .nlanding-hiring.primary {
-  background: linear-gradient(90deg, $primary-darker-darker, $primary-darker, $primary);
+  background: linear-gradient(
+    90deg,
+    $primary-darker-darker,
+    $primary-darker,
+    $primary
+  );
 }
 
 .nlanding-hiring.accent {
@@ -231,40 +225,34 @@
   background: $background;
 }
 
-
 .nlanding-image-container {
   height: 500px;
   position: relative;
   overflow: hidden;
-
 }
-
 
 @media (min-width: 992px) {
   .nlanding-image-container > * {
-	transform: scale(1);
+    transform: scale(1);
   }
 
   .nlanding-image-container {
-	height: 500px;
+    height: 500px;
   }
-
 }
-
 
 @media (min-width: 768px) and (max-width: 991px) {
   .nlanding-image-container > * {
-	display: table;
-	margin: auto !important;
-	left: 0;
-	right: 0;
-	transform: scale(0.6);
+    display: table;
+    margin: auto !important;
+    left: 0;
+    right: 0;
+    transform: scale(0.6);
   }
   .nlanding-image-container {
-	width: 100%;
-	flex: 100%;
-	height: 300px;
-
+    width: 100%;
+    flex: 100%;
+    height: 300px;
   }
 }
 
@@ -274,41 +262,40 @@
 
 @media (max-width: 767px) {
   .padding-two-before-after-desktop {
-	padding: 0;
+    padding: 0;
   }
   .home-convert-list {
-	text-align: center;
+    text-align: center;
   }
   .nlanding-text-item {
-	font-size: 24px !important;
-	line-height: 50px;
+    font-size: 24px !important;
+    line-height: 50px;
   }
   .nlanding-hiring {
-	height: 640px;
-	position: relative;
-	padding: $spacing-two 0;
+    height: 640px;
+    position: relative;
+    padding: $spacing-two 0;
   }
   .nlanding-hiring .button-view {
-	width: calc(100% - 64px);
-	margin: $spacing $spacing-two !important;
+    width: calc(100% - 64px);
+    margin: $spacing $spacing-two !important;
   }
   .nlanding-hiring .master-column {
-	flex: 100%;
+    flex: 100%;
   }
   .nlanding-image-container {
-	width: 100%;
-	height: 300px !important;
-	position: absolute;
-	top: 360px;
+    width: 100%;
+    height: 300px !important;
+    position: absolute;
+    top: 360px;
   }
   .nlanding-start-now {
-	margin-top: 0 !important;
+    margin-top: 0 !important;
   }
 
   .nlanding-image-container > * {
-	width: 100% !important;
-	height: 300px !important;
-
+    width: 100% !important;
+    height: 300px !important;
   }
 }
 
@@ -408,7 +395,6 @@
   stroke: $primary;
 }
 
-
 .dark .links-view-item .icon-root {
   fill: transparent;
   margin: $spacing;
@@ -422,7 +408,6 @@
 .dark .links-view-item .icon-root * {
   stroke: $white !important;
 }
-
 
 .toolbar .toolbar-button .icon-root * {
   fill: transparent !important;
@@ -440,7 +425,6 @@
   color: $primary;
   margin: $spacing;
 }
-
 
 .dark .links-view-item p {
   color: $white;
@@ -495,116 +479,111 @@
   opacity: 1;
 }
 
-
 .toolbar .no-white .fill-icon .icon-root * {
   fill: $primary !important;
   stroke: $primary !important;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
 }
 
 @media (max-width: 767px) {
   .nlanding-header {
   }
-  .nlanding-h1-greenoly {
-	font-size: 18px;
+  .nlanding-h1-Momentum-AI {
+    font-size: 18px;
   }
   .nlanding-h1-follow {
-	font-size: 28px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 480px) {
   .nlanding-header {
-	padding: $spacing-two;
+    padding: $spacing-two;
   }
-  .nlanding-h1-greenoly {
-	font-size: 18px;
+  .nlanding-h1-Momentum-AI {
+    font-size: 18px;
   }
 }
 
 @media (max-width: 767px) {
-  .nlanding-header {
-	position: unset;
-	padding: 0;
-	height: unset;
+  .nlanding-heaMomentum-AI {
+    position: unset;
+    padding: 0;
+    height: unset;
   }
   .nlanding-h1-container {
-	line-height: 30px !important;
-	text-align: center;
-	position: unset;
-	flex: 1;
-
+    line-height: 30px !important;
+    text-align: center;
+    position: unset;
+    flex: 1;
   }
   .nlanding-header br {
-	height: 0;
-	line-height: 0;
-	font-size: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
   }
-  .nlanding-h1-greenoly {
-	font-size: 22px;
-	font-family: Azarmehr, serif;
-	line-height: 20px !important;
-	text-shadow: none;
-	position: unset;
-
+  .nlanding-h1-Momentum-AI {
+    font-size: 22px;
+    font-family: Azarmehr, serif;
+    line-height: 20px !important;
+    text-shadow: none;
+    position: unset;
   }
   .nlanding-h1-intro {
-	font-size: 19px;
-	margin: 0;
-	line-height: 50px;
-	font-family: Azarmehr, serif;
-	position: unset;
-
+    font-size: 19px;
+    margin: 0;
+    line-height: 50px;
+    font-family: Azarmehr, serif;
+    position: unset;
   }
   .nlanding-h1-follow {
-	font-size: 24px;
-	line-height: 40px;
-	font-family: Azarmehr, serif;
-	text-shadow: none;
-	margin: 0 $spacing-two;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: Azarmehr, serif;
+    text-shadow: none;
+    margin: 0 $spacing-two;
   }
 
   .nlanding-get-started {
-	width: unset;
-	margin: $spacing $spacing $spacing;
+    width: unset;
+    margin: $spacing $spacing $spacing;
   }
 
   .nlanding-get-started-text {
-	position: unset;
-	text-align: center;
-	width: calc(100% - 32px);
-	margin: $spacing-two;
-	font-size: 20px !important;
+    position: unset;
+    text-align: center;
+    width: calc(100% - 32px);
+    margin: $spacing-two;
+    font-size: 20px !important;
   }
   .nlanding-get-started-button {
-	width: 200px;
-	margin: 0 calc(50% - 108px) !important;
-	position: unset;
+    width: 200px;
+    margin: 0 calc(50% - 108px) !important;
+    position: unset;
   }
   .nlanding-header-items-container {
-	position: unset;
-	padding: $spacing;
+    position: unset;
+    padding: $spacing;
   }
   .nlanding-header-item-container {
-	flex: calc(50% - 16px);
+    flex: calc(50% - 16px);
   }
   .nlanding-header-image {
-	width: 100%;
-	height: 200px;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 100px;
-	display: none;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    display: none;
   }
   .nlanding-header-image > * {
-	width: 200px !important;
-	height: 200px !important;
+    width: 200px !important;
+    height: 200px !important;
   }
   .nlanding-h1-container-container {
-	width: 100%;
+    width: 100%;
   }
 }
