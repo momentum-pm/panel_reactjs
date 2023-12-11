@@ -110,13 +110,17 @@ export default class Thread extends Store {
       if (a.created_at < b.created_at) return 1;
       return 0;
     });
-    if (new_messages.length > 0) {
-      Threads.get().setLatestMessage(this.state.thread, new_messages[0]);
+    let first_message = new_messages.length > 0 ? new_messages[0] : null;
+
+    if (first_message) {
+      Threads.get().setFirstMessage(this.state.thread, first_message);
     }
     this.state.messages = new_messages;
     setTimeout(() => this.setNewMessagesToFalse(), 300);
     this.save();
-    this.timer = setTimeout(() => this.loadNewer(), 10000);
+    if (first_message && !first_message.is_response) {
+      this.timer = setTimeout(() => this.loadNewer(), 3000);
+    }
   }
 
   setNewMessagesToFalse() {

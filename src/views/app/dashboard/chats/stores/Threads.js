@@ -47,10 +47,10 @@ export default class Threads extends RemoteStore {
     }
   }
 
-  setLatestMessage(threadId, latest_message) {
+  setFirstMessage(threadId, first_message) {
     this.state.data = this.state.data.map((c) => {
       if (c.id.toString() === threadId.toString()) {
-        c.first_message = latest_message;
+        c.first_message = first_message;
         c.new_messages = 0;
       }
       return c;

@@ -84,8 +84,25 @@ class ThreadView extends StoreView {
   }
 
   getMessagesView() {
+    let first_message = this.props.thread.state.messages.length
+      ? this.props.thread.state.messages[0]
+      : null;
+    let response_template = first_message && !first_message.is_response;
+    console.log("HEREEEEEEEEEEEEEEEEEEEE------------------------");
+    console.log(response_template);
     return (
       <Scrollable className={"conversation-messages"}>
+        {response_template ? (
+          <MessageView
+            key={"template"}
+            message={{
+              id: "template",
+              isNewMessage: true,
+              is_response: true,
+              content: "...",
+            }}
+          />
+        ) : null}
         {this.props.thread.state.messages.map(this.mapMessageToView)}
       </Scrollable>
     );
@@ -97,7 +114,6 @@ class ThreadView extends StoreView {
 
   getMessageView() {
     let state = this.props.thread.state;
-
     let submitButtonClass = "conversation-message-button",
       submitButtonIcon = Res.icon.send;
     if (state.submitActive) {
