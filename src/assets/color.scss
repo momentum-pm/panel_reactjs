@@ -1,0 +1,241 @@
+$colors: (
+  (
+    name: "primary",
+    dark: hsl(220, 60%, 45%),
+    disabled: hsl(220, 22%, 54%),
+    default: hsl(220, 75%, 55%),
+    light: hsl(220, 75%, 65%),
+    background: hsl(220, 5%, 95%),
+  ),
+  (
+    name: "secondary",
+    dark: hsl(48, 70%, 30%),
+    disabled: hsl(48, 22%, 55%),
+    default: hsl(48, 100%, 39%),
+    light: hsl(48, 100%, 45%),
+    background: hsl(48, 5%, 95%),
+    trnasparent-background: hsla(48, 100%, 95%, 0.8),
+  ),
+  (
+    name: "link",
+    dark: hsl(200, 70%, 30%),
+    disabled: hsl(200, 22%, 55%),
+    default: hsl(200, 100%, 39%),
+    light: hsl(200, 100%, 45%),
+    background: hsl(200, 5%, 95%),
+    trnasparent-background: hsla(200, 100%, 95%, 0.8),
+  ),
+  (
+    name: "success",
+    dark: #2b8c4a,
+    disabled: #829988,
+    default: #37b360,
+    light: #43d973,
+    background: #e8fff0,
+  ),
+  (
+    name: "danger",
+    dark: #bf3952,
+    disabled: #b3989d,
+    default: #e64560,
+    light: #ff4d6d,
+    background: #ffe8ed,
+  ),
+  (
+    name: "gray",
+    dark: #333333,
+    disabled: #b3b3b3,
+    default: #4d4d4d,
+    light: #666666,
+    background: #f1f1f1,
+  )
+);
+$dark-colors: (
+  (
+    name: "primary",
+    dark: hsl(220, 60%, 45%),
+    disabled: hsl(220, 22%, 54%),
+    default: hsl(220, 75%, 55%),
+    light: hsl(220, 75%, 65%),
+    background: hsl(220, 5%, 95%),
+  ),
+  (
+    name: "secondary",
+    dark: hsl(48, 70%, 30%),
+    disabled: hsl(48, 22%, 55%),
+    default: hsl(48, 100%, 39%),
+    light: hsl(48, 100%, 45%),
+    background: hsl(48, 5%, 95%),
+    trnasparent-background: hsla(48, 100%, 95%, 0.8),
+  ),
+  (
+    name: "link",
+    dark: hsl(200, 70%, 30%),
+    disabled: hsl(200, 22%, 55%),
+    default: hsl(200, 100%, 39%),
+    light: hsl(200, 100%, 45%),
+    background: hsl(200, 5%, 95%),
+    trnasparent-background: hsla(200, 100%, 95%, 0.8),
+  ),
+  (
+    name: "success",
+    dark: #2b8c4a,
+    disabled: #829988,
+    default: #37b360,
+    light: #43d973,
+    background: #e8fff0,
+  ),
+  (
+    name: "danger",
+    dark: #bf3952,
+    disabled: #b3989d,
+    default: #e64560,
+    light: #ff4d6d,
+    background: #ffe8ed,
+  ),
+  (
+    name: "gray",
+    dark: #aaaaaa,
+    disabled: #888888,
+    default: #bbbbbb,
+    light: #cccccc,
+    background: #333333,
+  )
+);
+$hyperlink: hsl(220, 100%, 71%);
+$primary-name: "primary";
+$primary: hsl(220, 75%, 55%);
+$primary-transparent: rgba(100, 100, 100, 0.8);
+$primary-darker: hsl(161, 22%, 54%);
+$primary-background: hsl(160, 5%, 95%);
+
+$secondary-name: "secondary";
+$secondary: hsl(48, 100%, 39%);
+$secondary-darker: #e68600;
+$secondary-background: #ffeed9;
+
+$accent-name: "accent";
+$accent: #2e9963;
+$accent-darker: #1f9480;
+$accent-background: #d9fff9;
+
+$success-name: "success";
+$success: #22ae6d;
+$success-darker: #1c8a56;
+$success-background: #e6f2ec;
+
+$danger-name: "danger";
+$danger: #f83245;
+$danger-darker: #d62d3e;
+$danger-background: #fff2f4;
+
+$primary-dark-theme: #1fc1ff;
+$primary-darker-darker: #425180;
+
+$black-light: rgb(58, 60, 62);
+$black-mid: rgb(42, 43, 45);
+$black-dark: rgb(29, 30, 32);
+$black-darker: #131313;
+$info: #829dff;
+$info-darker: #758fe6;
+
+$accent-background: #d9fff9;
+$accent: #2e9963;
+$accent-lighter: #36ffdd;
+$accent-lighter-darker: #2dccaf;
+$accent-darker: #1f9480;
+
+$gray: #474747;
+$gray-darker: #303030;
+
+$box-shadow-primary: 0px 0px 10px 3px rgba(70, 93, 153, 0.5);
+$box-shadow-secondary: 0px 0px 10px 3px rgba(112, 115, 194, 0.4);
+$box-shadow-accent: 0px 0px 10px 3px rgba(35, 173, 150, 0.4);
+$box-shadow-success: 0px 0px 10px 3px rgba(35, 174, 109, 0.4);
+$box-shadow-danger: 0px 0px 10px 3px rgba(248, 50, 69, 0.4);
+
+$white-transparent: rgba(255, 255, 255, 0.08);
+$black-transparent: rgba(100, 100, 100, 0.1);
+
+$inner-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+$tag-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+$box-shadow: 0 0 10px 1px rgba(32, 32, 32, 0.05);
+$box-shadow-bold: 5px 5px 5px 5px rgba(32, 32, 32, 0.1);
+$box-shadow-extra-bold: 0 0 10px 10px rgba(32, 32, 32, 0.1);
+$selling-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.4);
+$selling-shadow-hovered: 0px 0px 10px 8px rgba(0, 0, 0, 0.4);
+
+$text-color: #27333b;
+$text-weight: 200;
+$text-weight-bold: 400;
+
+$heading-color: #5c6266;
+$heading-weight: 300;
+$icon-width: 16px;
+$icon-color: #808080;
+$border: 1px solid #eaeaea;
+
+$text: #27333b;
+$text-secondary: #3d4853;
+$text-heading: #5e6f80;
+$text-placeholder: #999999;
+
+$icon: #808080;
+$line: rgba(0, 0, 0, 0.23);
+.dark {
+  $line: rgba(255, 255, 255, 0.23);
+}
+$slim-line: #ddd;
+
+$background: #eeeff8;
+$background-transparent: rgba(238, 239, 248, 0.1);
+$background-light: #fafafa;
+$white: #ffffff;
+
+$asteroid-gradient: linear-gradient(
+  -135deg,
+
+  hsl(200, 100%, 5%) 0,
+  hsl(200, 100%, 12%) 50%,
+  hsl(200, 100%, 5%) 100%
+);
+$nightsky: linear-gradient(90deg, $black-dark, $black-light, $black-dark);
+$golden-gradient: linear-gradient(
+  60deg,
+  hsl(220, 10%, 5%),
+  hsl(220, 10%, 10%),
+  hsl(220, 10%, 15%)
+);
+// $golden-gradient:linear-gradient(60deg,hsl(48, 60%, 15%),hsl(48, 80%, 22%),hsl(48, 100%, 30%));
+$vicious-stance: linear-gradient(60deg, #29323c, #485563);
+$primary-accent: linear-gradient(
+  -135deg,
+  hsl(90, 100%, 5%),
+  hsl(90, 100%, 10%),
+  hsl(90, 100%, 5%)
+);
+$school-gradient: linear-gradient(-90deg, #ff387a, #e63b60);
+$blue-purple: linear-gradient(70deg, $primary, #5e5bb3, $secondary);
+$secondary-gradient: linear-gradient(135deg, #526ecc, #815bb3, #e63c5b);
+
+$rank_9: #0b9c03;
+$rank_8: #36ae01;
+$rank_7: #69c301;
+$rank_6: #9dd800;
+$rank_5: #fffc01;
+$rank_4: #fec900;
+$rank_3: #ff9700;
+$rank_2: #ff6300;
+$rank_1: #fd3100;
+$rank_0: #ff0800;
+
+$field-shadow: inset 0 0 3px rgba(80, 80, 80, 0.1);
+$field-shadow-active: inset 0 0 4px rgba(40, 40, 40, 0);
+$field-shadow-success: inset 0 0 4px rgba(34, 174, 109, 0);
+$field-shadow-danger: inset 0 0 4px rgba(248, 50, 69, 0);
+
+$accent-lighter: #36ffdd;
+$accent-lighter-darker: #2dccaf;
+
+$outer-shadow-magic: 5px 5px 20px 0px rgba(220, 220, 220, 0.3);
+$inner-shadow-magic: inset 10px 10px 10px rgba(30, 30, 30, 0.3);

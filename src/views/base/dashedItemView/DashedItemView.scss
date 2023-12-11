@@ -1,0 +1,31 @@
+@import "../../../assets/color";
+@import "../../../assets/dimen";
+
+.dashed-item-view {
+  padding: $spacing-half 0;
+}
+
+.dashed-item-title{
+  font-size: $font-size-m;
+  color: $text-secondary;
+}
+.dashed-item-value {
+  font-size: $font-size-l;
+  color: $text;
+}
+.dashed-item-value.line-through{
+  color: $text-placeholder;
+  text-decoration: line-through;
+}
+.dashed-item-value.accent{
+  color: $accent;
+}
+.dashed-item-view.large {
+  .dashed-item-title{
+    font-size: $font-size-l;
+  }
+  .dashed-item-value{
+    font-size: $font-size-xl;
+    font-weight: 500;
+  }
+}

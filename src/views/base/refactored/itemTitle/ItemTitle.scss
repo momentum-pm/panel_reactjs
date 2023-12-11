@@ -1,0 +1,17 @@
+@import "../../../../assets/dimen";
+@import "../../../../assets/color";
+
+.item-title {
+  font-size: $font-size-l;
+  margin: 0;
+}
+.dark .item-title {
+  color: $white;
+}
+.fa .item-title {
+	margin-left: $spacing;
+  }
+
+  .en .item-title {
+	margin-right: $spacing;
+  }

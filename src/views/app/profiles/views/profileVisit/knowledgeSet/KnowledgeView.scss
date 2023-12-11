@@ -1,0 +1,21 @@
+@import "../../../../../../assets/dimen";
+@import "../../../../../../assets/color";
+
+.knowledge-view-item {
+  background: $background-light;
+  margin: $spacing;
+  overflow: hidden;
+  border-radius: $button-border-radius;
+  width: calc(50% - 16px);
+  position: relative;
+}
+
+@media (max-width: 767px) {
+
+  .knowledge-view-item {
+	background: unset !important;
+	margin: 0;
+	border-radius: $button-border-radius;
+	width: 100%;
+  }
+}

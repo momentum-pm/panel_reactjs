@@ -1,0 +1,134 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.date-field-view {
+  position: relative;
+  height: 48px;
+}
+
+.date-field-view-value {
+  width: 100%;
+  height: 48px;
+  border: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background: $background-light;
+  border-radius: $field-border-radius;
+  transition: $transition-all;
+}
+
+.date-field-view-value-active {
+  line-height: 48px;
+  padding: 0 $spacing;
+  font-size: $font-size-m;
+  color: $icon;
+  text-align: center;
+}
+
+.date-field-view-input {
+  width: 100%;
+  height: 48px;
+  border: none;
+  margin: 0;
+  position: absolute;
+  padding: 0;
+  background: red;
+  border-radius: $field-border-radius;
+  opacity: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.date-field-view-input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.date-field-view-input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.date-field-view-input::-webkit-clear-button {
+  display: none;
+}
+
+.field:hover .date-field-view-value,
+.field:focus-within .date-field-view-value {
+  background: $background;
+}
+
+.dark .date-field-view-value {
+  background-color: $black-mid;
+}
+.dark .field:hover .date-field-view-value,
+.dark .field:focus-within .date-field-view-value {
+  background-color: $black-dark;
+}
+
+.field.success .date-field-view-value {
+  background: $success-background;
+}
+
+.field.danger .date-field-view-value {
+  background: $danger-background;
+}
+
+.field.danger .date-field-view-value * {
+  color: $danger;
+}
+
+.date-field-view-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.date-field-calendar-container {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.date-field-calendar-mask {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: $black-transparent;
+}
+
+.date-field-calendar {
+  position: fixed;
+  z-index: 1000;
+  left: calc(50% - 142px);
+  right: calc(50% - 142px);
+  top: calc(50% - 180px);
+  bottom: calc(50% - 180px);
+  width: 284px;
+  height: 360px;
+  background: $white;
+  margin: $spacing;
+  background: $black-transparent;
+}
+.dark {
+  .date-field-calendar-mask {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .field.success .date-field-view-value {
+    background: $black-dark;
+  }
+
+  .field.danger .date-field-view-value {
+    background: $black-dark;
+  }
+}

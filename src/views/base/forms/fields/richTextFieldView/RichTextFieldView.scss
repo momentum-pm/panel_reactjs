@@ -1,0 +1,85 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.rich-text-field-view {
+  direction: ltr;
+  background: white;
+  overflow: hidden;
+  background: $background-light;
+  box-shadow: $field-shadow;
+  border-radius: $field-border-radius;
+}
+.dark .rich-text-field-view{
+  background: $black-dark;
+}
+
+.rich-text-field-view * {
+  font-family: KalamehWeb, sans-serif;
+}
+
+.ql-toolbar.ql-snow {
+  border: none;
+  border-bottom: 1px solid $line;
+  border-top-left-radius: $field-border-radius;
+  border-top-right-radius: $field-border-radius;
+}
+
+.ql-container.ql-snow {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-left-radius: $field-border-radius;
+  border-bottom-right-radius: $field-border-radius;
+}
+
+.ql-editor{
+  min-height: 200px;
+}
+
+.minimal-toolbar .ql-editor{
+  min-height: 100px;
+}
+
+
+.ql-editor p {
+  font-size: $font-size-m !important;
+}
+
+.ql-editor h1 {
+  font-size: $font-size-xxl !important;
+}
+.ql-editor h2{
+  font-size: $font-size-xl !important;
+}
+
+.ql-editor ol {
+  list-style: decimal !important;
+  margin: unset !important;
+  padding: 0 20px 0 !important;
+}
+
+
+.ql-editor ul {
+  list-style: unset !important;
+  margin: unset !important;
+  padding: 0 20px 0 !important;
+}
+
+.ql-editor li {
+  font-size: $font-size-m !important;
+  color: $text-color !important;
+}
+.dark .ql-editor li{
+  color: $white !important;
+}
+
+.ql-editor a {
+  color: $accent !important;
+  text-decoration: underline !important;
+}
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  font-size: $font-size-s;
+  color: $text-placeholder;
+  direction: rtl;
+  text-align: start;
+}

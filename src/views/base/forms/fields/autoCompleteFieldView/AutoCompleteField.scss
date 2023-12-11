@@ -1,0 +1,48 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.auto-complete-field-view {
+  position: relative;
+}
+.auto-complete-field-view:focus-within  .auto-complete-field-view-items,
+.auto-complete-field-view:active .auto-complete-field-view-items,
+.auto-complete-field-view:focus  .auto-complete-field-view-items{
+  display: block;
+}
+.auto-complete-field-view-items {
+  border-radius: $button-border-radius;
+  position: absolute;
+  width: 100%;
+  margin: $spacing 0 0 0;
+  -webkit-appearance: none;
+  border: $border;
+  outline: none;
+  background: $background-light;
+  display: none;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.dark .auto-complete-field-view-items{
+  background: $black-dark;
+}
+.auto-complete-field-view-item {
+  font-size: $font-size-m;
+  line-height: 32px;
+  margin: 0;
+  padding: $spacing $spacing-two;
+  border-bottom: 1px solid $line;
+  transition: $transition-all;
+  cursor: pointer;
+}
+
+.auto-complete-field-view-item:hover {
+  background: $background;
+}
+.dark .auto-complete-field-view-item:hover {
+  background: $black-mid;
+}
+
+.auto-complete-field-view-item:last-child {
+  border-bottom: none;
+}

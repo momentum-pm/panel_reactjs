@@ -1,0 +1,40 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+.group-multi-select-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fa .group-multi-select-items {
+  padding-right: $spacing-two;
+}
+
+.en .group-multi-select-items {
+  padding-left: $spacing-two;
+}
+
+.group-multi-select-items .checkbox-field-item p {
+  font-size: $font-size-s !important;
+}
+
+.group-multi-select-items .checkbox-field-item-check-container {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.group-multi-select-items .checkbox-field-item-check {
+  height: 12px !important;
+  width: 12px !important;
+  margin: 8px !important;
+}
+
+.group-multi-select-items .checkbox-field-item-check .icon-root {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 1px !important;
+}
+
+
+.group-multi-select-items .checkbox-field-item {
+  width: 50% !important;
+}

@@ -1,0 +1,16 @@
+@import "../../../../assets/dimen";
+@import "../../../../assets/color";
+
+.item-info {
+  font-size: $font-size-m;
+  margin: 0;
+  color: $text-color;
+}
+
+.fa .item-info {
+  margin-left: $spacing;
+}
+
+.en .item-info {
+  margin-right: $spacing;
+}

@@ -1,0 +1,44 @@
+@import "../../../assets/dimen";
+@import "../../../assets/color";
+
+.hint-box {
+  background: $background;
+  //box-shadow: $inner-shadow-secondary;
+  border-radius: $box-border-radius;
+  padding: $spacing;
+  margin: $spacing;
+  width: calc(100% - #{$spacing-four});
+}
+.dark .hint-box{
+  background: $black-dark;
+}
+
+.hint-box h5 {
+  margin: $spacing;
+  color: $primary;
+}
+
+.hint-box li {
+  margin: $spacing;
+}
+
+.hint-box li a {
+  color: $accent !important;
+  margin: 0 $spacing;
+}
+
+.hint-circle {
+  width: $spacing;
+  height: $spacing;
+  border-radius: 50%;
+  background: $accent;
+  margin: $spacing;
+}
+
+
+.hint-view-title-content {
+  display: inline-block;
+  vertical-align: top;
+  padding: $spacing-half 0;
+  width: calc(100% - 24px);
+}

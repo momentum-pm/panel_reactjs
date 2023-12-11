@@ -1,0 +1,144 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.tag-searcher-field-view {
+  position: relative;
+}
+
+.tag-searcher-field-view-input {
+  line-height: 32px;
+  width: calc(100% - 32px);
+  -webkit-appearance: none;
+  outline: none;
+  background: $background-light;
+  display: block;
+  padding: $spacing $spacing-two;
+  text-align: start;
+  transition: all 0.3s linear;
+  border: none;
+  box-shadow: $field-shadow;
+  border-radius: $field-border-radius;
+  resize: none;
+
+}
+
+.tag-searcher-field-view-input:focus,
+.tag-searcher-field-view-input:active,
+.tag-searcher-field-view-input:hover {
+  box-shadow: $field-shadow-active;
+  background: $background;
+  border-color: $accent;
+}
+
+.tag-searcher-field-view-loading {
+  width: 16px;
+  height: 16px;
+  margin: 8px;
+  position: absolute;
+  top: 8px;
+}
+.tag-searcher-field-view-loading .icon-root{
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.en .tag-searcher-field-view-loading {
+  right: 4px;
+}
+
+.fa .tag-searcher-field-view-loading {
+  left: 4px;
+}
+
+.selected-item {
+  margin: $spacing-half;
+  border-radius: $button-border-radius;
+  font-size: $font-size-s;
+  white-space: nowrap;
+  height: 30px;
+  border: 1px solid $accent;
+  cursor: pointer;
+  display: inline-block;
+  transition: $transition-all;
+}
+
+.selected-item .icon-root {
+  margin: 7px;
+  width: $icon-size;
+  height: $icon-size;
+  fill: $accent;
+}
+
+.selected-item:hover {
+  background: $background;
+}
+
+.selected-item-title {
+  margin: 0;
+  line-height: 30px;
+  vertical-align: top;
+  height: 30px;
+  border-radius: $button-border-radius;
+  color: $accent;
+  font-size: $font-size-s;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.en .selected-item-title {
+  margin-left: $spacing !important;
+}
+
+.fa .selected-item-title {
+  margin-right: $spacing !important;
+}
+
+
+
+.to-select-item {
+  margin: $spacing-half;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $button-border-radius;
+  color: $text;
+  font-size: $font-size-s;
+  white-space: nowrap;
+  height: 30px;
+  transition: $transition-all;
+}
+
+.to-select-item:hover {
+  border-color: $success;
+  cursor: pointer;
+}
+
+.to-select-item:hover .icon-root {
+  fill: $success;
+}
+
+.to-select-item-title {
+  margin: 0;
+  line-height: 30px;
+  vertical-align: top;
+  height: 30px;
+  border-radius: $button-border-radius;
+  color: $text-placeholder;
+  font-size: $font-size-s;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.en .to-select-item-title {
+  margin-left: $spacing !important;
+}
+
+.fa .to-select-item-title {
+  margin-right: $spacing !important;
+}
+
+.to-select-item .icon-root {
+  margin: 7px;
+  color: $text-placeholder;
+  width: $icon-size;
+  height: $icon-size;
+}

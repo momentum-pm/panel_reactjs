@@ -1,0 +1,40 @@
+@import "../../../../assets/dimen";
+@import "../../../../assets/color";
+
+.box-container {
+  padding: $spacing;
+}
+
+.box {
+  margin: $spacing;
+  border-radius: $box-border-radius;
+  background: $white;
+  box-shadow: $box-shadow;
+  display: inline-block;
+  width: calc(100% - #{$spacing-two});
+}
+
+.box .border-top {
+  border-bottom-right-radius: $box-border-radius;
+  border-bottom-left-radius: $box-border-radius;
+}
+
+.box.clickable:hover {
+  background: $white;
+  box-shadow: $box-shadow-bold;
+}
+
+@media (max-width: 767px) {
+  .box {
+    margin: 0 0 $spacing-two;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .box .form-title {
+    border-radius: 0 !important;
+  }
+  .box-container {
+    padding: 0;
+  }
+}

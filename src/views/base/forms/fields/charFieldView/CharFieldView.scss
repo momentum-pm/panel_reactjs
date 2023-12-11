@@ -1,0 +1,81 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.char-field-view {
+  width: calc(100% - 32px);
+  line-height: 32px;
+  -webkit-appearance: none;
+  outline: none;
+  background: $background-light;
+  display: block;
+  padding: $spacing $spacing-two;
+  text-align: start;
+  transition: all 0.3s linear;
+  border: none;
+  box-shadow: $field-shadow;
+  border-radius: $field-border-radius;
+  resize: none;
+}
+.dark .char-field-view{
+  color: $background-light;
+}
+
+.dark .darker-field .char-field-view{
+background-color: $black-dark;
+}
+.dark .char-field-view {
+  background: $black-mid;
+}
+.dark .char-field-view.darker{
+  background: $black-dark;
+}
+
+textarea.char-field-view {
+  width: calc(100% - 16px);
+
+}
+
+.char-field-view::placeholder {
+  color: $text-placeholder;
+  opacity: 1;
+  font-size: $font-size-m;
+}
+
+.field:hover .char-field-view,
+.field:focus-within .char-field-view {
+  box-shadow: $field-shadow-active;
+  background: $background;
+
+}
+
+.dark .field:hover .char-field-view,
+.dark .field:focus-within .char-field-view {
+  background: $black-dark;
+
+}
+
+
+.field.success .char-field-view {
+  box-shadow: $field-shadow-success;
+  background: $success-background;
+}
+.dark .field.success .char-field-view {
+  background: $black-dark;
+}
+
+.field.danger .char-field-view {
+  box-shadow: $field-shadow-danger;
+  background: $danger-background;
+}
+
+.field.danger .char-field-view::placeholder {
+  color: $danger;
+}
+
+.dark .field.danger .char-field-view {
+  background: $black-dark;
+}
+
+.dark .field.danger .char-field-view::placeholder {
+  color: $text-placeholder;
+}

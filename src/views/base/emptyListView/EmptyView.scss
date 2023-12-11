@@ -1,0 +1,19 @@
+@import "../../../assets/color";
+@import "../../../assets/dimen";
+
+.empty-view-image{
+  width: 120px;
+  height: 120px;
+}
+
+.empty-view-title{
+  font-size: $font-size-m;
+  color: $heading-color;
+  margin: 0 !important;
+}
+
+.empty-view-text{
+  font-size: $font-size-m;
+  color: $text-color;
+  margin: 0 !important;
+}

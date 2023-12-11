@@ -1,0 +1,52 @@
+@import "../../../../../assets/dimen";
+@import "../../../../../assets/color";
+
+.contact-us-page {
+  padding:$spacing-four 0;
+}
+
+.about-us-container {
+  padding:  $spacing-four;
+  margin: $spacing-two auto;
+  border-radius: $button-border-radius;
+  display: table;
+  background: $background-light;
+
+}
+.about-us-logo-container .icon-root{
+  width: 48px;
+  height: 48px;
+  margin: $spacing-two;
+  fill: $primary;
+}
+.about-us-logo-container h2{
+  margin: $spacing-two 0;
+  color: $primary !important;
+}
+.about-us-logo-container {
+  display: table;
+  margin: $spacing-two auto;
+}
+.about-us-container p {
+  font-style: italic;
+  margin: 0 0 $spacing-two;
+  line-height: 32px;
+  font-size: 18px;
+}
+.about-us-container p.end-note{
+  text-align: end;
+  font-size: 14px;
+}
+
+.contact-us-page-form {
+  box-shadow: $box-shadow;
+  border-radius: $box-border-radius;
+  padding: $spacing-two;
+  background: $white;
+}
+
+@media (max-width: 767px) {
+  .contact-us-page {
+	padding: 0 !important;
+  }
+}

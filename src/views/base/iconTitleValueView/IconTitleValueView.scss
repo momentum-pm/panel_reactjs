@@ -1,0 +1,293 @@
+@import "../../../assets/dimen";
+@import "../../../assets/color";
+
+.icon-title-value-view-title{
+  font-weight: 200;
+
+}
+.icon-title-value-view.large {
+  margin: $spacing 0 !important;
+}
+.icon-title-value-view.underlined .icon-title-value-view-value {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.icon-title-value-view.large .icon-title-value-view-value {
+  font-size: $font-size-l;
+  font-weight: 600;
+}
+.icon-title-value-view.icon-primary .icon-root {
+  fill: $primary;
+  stroke: $primary;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.icon-title-value-view.large .icon-title-value-view-title {
+  font-size: $font-size-m;
+}
+.icon-title-value-view.small .icon-title-value-view-value {
+  font-size: $font-size-s;
+}
+
+.icon-title-value-view.small .icon-title-value-view-title {
+  font-size: $font-size-xs;
+}
+
+.fa .icon-title-value-view {
+  padding-left: $spacing;
+}
+
+.en .icon-title-value-view {
+  padding-right: $spacing;
+}
+
+.icon-title-value-view .icon-root {
+  margin: $spacing 0;
+}
+
+.fa .icon-title-value-view .icon-root {
+  margin-left: $spacing;
+}
+
+.en .icon-title-value-view .icon-root {
+  margin-right: $spacing;
+}
+
+.fa .icon-title-value-view-title {
+  margin-left: $spacing;
+}
+
+.en .icon-title-value-view-title {
+  margin-right: $spacing;
+}
+
+.icon-title-value-view.expanded .icon-title-value-view-title {
+  flex: 1;
+}
+
+.icon-title-value-view.primary .icon-title-value-view-value {
+  color: $primary;
+}
+
+.icon-title-value-view.secondary .icon-title-value-view-value {
+  color: $secondary;
+}
+.icon-title-value-view.accent .icon-title-value-view-value {
+  color: $accent;
+}
+
+.icon-title-value-view.success .icon-title-value-view-value {
+  color: $success;
+}
+
+.icon-title-value-view.danger .icon-title-value-view-value {
+  color: $danger;
+}
+
+.icon-title-value-view.info .icon-title-value-view-value {
+  color: $accent;
+}
+
+.icon-title-value-view.white .icon-title-value-view-value {
+  color: $white;
+}
+
+.icon-title-value-view.white .icon-title-value-view-title {
+  color: $white;
+  opacity: 0.7;
+}
+
+.icon-title-value-view.white .icon-root {
+  fill: $white;
+  opacity: 0.7;
+}
+
+.icon-title-value-view.white.clickable {
+  padding: $spacing $spacing-two;
+  border-radius: $button-border-radius;
+  margin: $spacing 0;
+  transition: $transition-all;
+}
+
+.icon-title-value-view.clickable:hover {
+  background: none;
+}
+
+.icon-title-value-view.white.clickable:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icon-title-value-view.tag .icon-title-value-view-value {
+  border-radius: 8px;
+  height: 32px;
+  background: $background;
+  margin: $spacing 0;
+  padding: 0 $spacing;
+  line-height: 32px;
+}
+.dark .icon-title-value-view.tag .icon-title-value-view-value{
+  background: $black-dark;
+}
+
+.icon-title-value-view.tag.small .icon-title-value-view-value {
+  margin: $spacing 0 !important;
+  font-weight: 700;
+  line-height: 24px;
+  height: 24px;
+}
+
+.icon-title-value-view-content {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex: 1;
+}
+
+.icon-title-value-view {
+  align-items: center;
+  align-content: center;
+}
+
+.icon-title-value-view.thick {
+  align-items: unset !important;
+  align-content: unset !important;
+}
+
+.icon-title-value-view.thick .icon-root {
+  width: 24px;
+  height: 24px;
+  fill: $text-placeholder;
+}
+
+.icon-title-value-view.thick .icon-title-value-view-title {
+  line-height: 20px;
+  align-items: unset !important;
+  align-content: unset !important;
+}
+
+.icon-title-value-view.thick .icon-title-value-view-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: unset;
+  align-content: unset;
+}
+
+.icon-title-value-view.thick .icon-title-value-view-value {
+  font-weight: 700;
+  font-size: $font-size-l;
+  line-height: 24px;
+  margin: 8px 0 0;
+}
+
+.fa .icon-title-value-view.thick {
+  padding-left: unset;
+}
+
+.en .icon-title-value-view.thick {
+  padding-right: unset;
+}
+
+@media (max-width: 767px) {
+  .icon-title-value-view-title {
+    flex: 1;
+  }
+}
+
+.icon-title-value-view.vertical {
+  flex-direction: column;
+  align-items: center;
+}
+.vertical .icon-title-value-view-content {
+  flex-direction: column;
+  align-items: center;
+}
+.vertical .icon-root {
+  margin: $spacing $spacing 0;
+}
+.icon-title-value-view.vertical * {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.gray .icon-value-view-value {
+  color: $text-secondary;
+  font-weight: 300;
+}
+
+.icon-title-value-view.primary.title-colored .icon-title-value-view-title {
+  color: $primary;
+}
+
+.icon-title-value-view.primary.icon-colored .icon-root {
+  fill: $primary;
+}
+
+.icon-title-value-view.secondary.title-colored .icon-title-value-view-title {
+  color: $secondary;
+}
+
+.icon-title-value-view.secondary.icon-colored .icon-root {
+  fill: $secondary;
+}
+
+.icon-title-value-view.accent.title-colored .icon-title-value-view-title {
+  color: $accent;
+}
+
+.icon-title-value-view.accent.icon-colored .icon-root {
+  fill: $accent;
+}
+.icon-title-value-view.success.title-colored .icon-title-value-view-title {
+  color: $success;
+}
+
+.icon-title-value-view.success.icon-colored .icon-root {
+  fill: $success;
+}
+.icon-title-value-view.danger.title-colored .icon-title-value-view-title {
+  color: $danger;
+}
+
+.icon-title-value-view.danger.icon-colored .icon-root {
+  fill: $danger;
+}
+.dark .icon-title-value-view .icon-root {
+  opacity: 0.6;
+  padding: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-title-value-view {
+  &.large .icon-title-value-view-title {
+    font-size: $font-size-m;
+  }
+  &.large .icon-title-value-view-value {
+    font-weight: 600;
+    margin: 8px;
+    font-size: $font-size-xxl;
+  }
+  &.large-icon .icon-root {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+@media (max-width: 767px) {
+  .icon-title-value-view {
+    &.large .icon-title-value-view-title {
+      font-weight: 200;
+      margin: 0;
+      font-size: $font-size-s;
+    }
+    &.large .icon-title-value-view-value {
+      font-weight: 600;
+      margin: 0;
+      font-size: $font-size-l;
+    }
+    &.large-icon .icon-root {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+}

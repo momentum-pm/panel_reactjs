@@ -1,0 +1,118 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.select-field-view {
+  box-shadow: $field-shadow;
+  cursor: pointer;
+  border-radius: $field-border-radius;
+  background: $background-light;
+  position: relative;
+  width: 100%;
+  height: 48px;
+}
+
+.dark .select-field-view {
+  color: $background-light;
+}
+
+.dark .select-field-view {
+  background: $black-mid;
+}
+.select-field-view-icon {
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  margin: 16px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: transparent;
+}
+
+.en {
+  .select-field-view-icon {
+    left: unset;
+    right: 0 !important;
+  }
+}
+.select-field-view-input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  line-height: 32px;
+  z-index: 2;
+  background: transparent;
+  outline: none;
+  display: block;
+  text-align: start;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: $spacing $spacing-two;
+  transition: border 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: $font-size-m;
+  color: $text-placeholder;
+}
+
+.select-field-view.filled .select-field-view-input {
+  color: $text;
+}
+
+.dark .select-field-view.filled .select-field-view-input {
+  color: $white;
+}
+
+.select-field-view-loaded:focus-within,
+.select-field-view-loaded:focus,
+.select-field-view-loaded:active,
+.select-field-view-loaded:hover {
+  border-color: $accent;
+}
+
+.select-field-view-failed .select-field-view-icon {
+  cursor: pointer;
+}
+
+.select-field-view-option {
+  cursor: pointer;
+  color: $text !important;
+}
+
+//
+//
+//
+
+.field:hover .select-field-view,
+.field:focus-within .select-field-view {
+  box-shadow: $field-shadow-active;
+  background: $background;
+}
+
+.dark .field:hover .select-field-view,
+.dark .field:focus-within .select-field-view {
+  background: $black-dark;
+}
+
+.field.success .select-field-view {
+  box-shadow: $field-shadow-success;
+  background: $success-background;
+}
+.dark .field.success .select-field-view {
+  box-shadow: $field-shadow-success;
+  background: $black-dark;
+}
+
+.field.danger .select-field-view {
+  box-shadow: $field-shadow-danger;
+  background: $danger-background;
+}
+.dark .field.danger .select-field-view {
+  box-shadow: $field-shadow-danger;
+  background: $black-dark;
+}
+.field.danger .select-field-view .select-field-view-input {
+  color: $danger;
+}

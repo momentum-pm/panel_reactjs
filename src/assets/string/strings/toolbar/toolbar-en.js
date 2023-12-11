@@ -1,0 +1,30 @@
+export const toolbarEn = {
+	home: 'Home',
+	account: 'Account',
+	register: 'Register',
+	login: 'Login',
+	logout: 'Logout',
+	logout_question: 'Do you want to log-out from you account?',
+	change_lang: 'فارسی',
+	home_link_title: 'Win Work',
+	add_work_button_title: 'Post a Job',
+	find_work_button_title: 'Find a Job',
+	active_profile_title: 'Profiles',
+	edit_profile_button_title: 'Manage Profile',
+	user_profile: 'Personal Profile',
+	organization_profile: 'Organization Profile',
+	create_organization_button_title: 'New Organization Profile',
+	settings_button_title: 'Personal Settings',
+	logout_button_title: 'Logout',
+
+	register_button_title: 'Register/Login',
+	how_it_works_button_title: 'How It Works?',
+
+
+	financial: 'Financial and Transactions',
+	financialShort: 'Financial',
+	support: 'greenoly\'s Support',
+	supportShort: 'Support',
+	profile: 'Profile',
+	panel: 'Dashboard',
+};

@@ -1,0 +1,60 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.score-field-view {
+  margin: 8px 0;
+  width: calc(100% - #{$spacing});
+}
+.fa .score-field-view{
+  margin-right: $spacing;
+}
+
+.en .score-field-view{
+  margin-left: $spacing;
+}
+
+.score-field-container {
+  position: relative;
+  margin: $spacing-half;
+}
+
+.score-field-row {
+  width: 100%;
+}
+
+.score-field-input {
+  top: 0;
+  right: 2px;
+  left: 2px;
+  bottom: 0;
+  position: absolute;
+  width: calc(100% - 4px);
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.score-field-step {
+  background: $background;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 2px;
+  box-shadow: $inner-shadow;
+  transition: $transition-all;
+}
+
+.score-field-step.score-field-step-filled {
+  background: $accent !important;
+}
+
+.score-field-step.score-field-step-hidden {
+  opacity: 0;
+}
+
+.score-field-content {
+  padding: 2px;
+  height: 20px;
+}

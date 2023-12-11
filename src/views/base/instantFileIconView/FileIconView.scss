@@ -1,0 +1,297 @@
+@import "../../../assets/dimen";
+@import "../../../assets/color";
+
+.instant-audio-view {
+  display: block;
+  margin: $spacing;
+}
+
+.instant-audio-view audio {
+  width: 200px;
+  border-radius: 2px;
+}
+
+.instant-video-view {
+  border-radius: $button-border-radius;
+  margin: $spacing;
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.instant-video-view video {
+  width: 100px;
+  height: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  object-fit: cover;
+  transition: $transition-all;
+}
+
+.instant-video-view:hover video {
+  transform: scale(1.1);
+}
+
+.instant-image-view {
+  width: 100px;
+  height: 100px;
+  border-radius: $button-border-radius;
+  margin: $spacing;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.instant-image-view > .icon-root,
+.instant-video-view > .icon-root {
+  width: 32px;
+  height: 32px;
+  padding: 34px;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  object-fit: cover;
+  fill: $white !important;
+  stroke: $white !important;
+  transition: $transition-all;
+  opacity: 1;
+}
+
+.instant-document-view {
+  width: 100px;
+  height: 100px;
+  border-radius: $button-border-radius;
+  margin: $spacing;
+  position: relative;
+  background: $background;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.instant-document-view-content {
+  width: 100px;
+  height: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  object-fit: cover;
+  transition: $transition-all;
+}
+
+
+.instant-document-view-name {
+  direction: ltr !important;
+  text-align: center;
+  line-height: 18px;
+  margin: 8px;
+  color: $white;
+  overflow: hidden;
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+  width: calc(100% - 16px);
+  white-space: nowrap;
+
+}
+
+.instant-document-view-icon {
+  width: 32px !important;
+  height: 32px !important;
+  margin: 0 34px 0;
+}
+
+.instant-document-view-icon .icon-root {
+  width: 32px !important;
+  height: 32px !important;
+  display: block;
+  fill: $white !important;
+  stroke: $white !important;
+}
+
+
+.instant-document-view-title {
+  color: $white;
+  font-size: $font-size-l;
+  text-align: center;
+  transition: $transition-all;
+
+}
+
+.instant-image-view-image {
+  width: 100px;
+  height: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  object-fit: cover;
+  transition: $transition-all;
+}
+
+.instant-image-view:hover .instant-image-view-image {
+  transform: scale(1.1);
+}
+
+.instant-document-view:hover .instant-document-view-title {
+  font-size: $font-size-xl;
+}
+
+.instant-image-view:hover > .icon-root,
+.instant-video-view:hover > .icon-root {
+  opacity: 0 !important;
+}
+
+.instant-image-modal {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: inline-table;
+}
+
+.instant-image-modal .box {
+  width: unset !important;
+}
+
+.instant-image-modal-image {
+  width: 450px;
+  max-height: 450px;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.instant-image-modal .close-button {
+  position: fixed;
+  top: $spacing;
+  left: $spacing;
+}
+
+@media (max-width: 767px) {
+  .instant-image-modal {
+	width: 100% !important;
+  }
+  .instant-image-modal .box {
+	overflow: hidden !important;
+	border-radius: $box-border-radius !important;
+  }
+  .instant-image-modal-image {
+	width: 100% !important;
+	max-height: 100% !important;
+	border-radius: $button-border-radius;
+	object-fit: cover;
+  }
+  .samples-view {
+	width: 348px;
+	margin: auto;
+  }
+  .samples-view-in-modal {
+	width: 316px;
+	margin: auto;
+  }
+}
+
+@media (max-width: 363px) {
+  .samples-view {
+	width: 248px;
+	margin: auto;
+  }
+  .samples-view-in-modal {
+	width: 216px;
+	margin: auto;
+  }
+}
+
+.sample-edit-view {
+  width: 100px;
+  height: 100px;
+  margin: $spacing;
+  position: relative;
+}
+
+.sample-edit-view .button-view {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.sample-edit-view .button-view .icon-root {
+  fill: $white !important;
+}
+
+.sample-edit-view .button-view:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.sample-edit-view .button-view:hover .icon-root {
+  fill: $danger !important;
+}
+
+.sample-edit-view .instant-document-view,
+.sample-edit-view .instant-image-view,
+.sample-edit-view .instant-video-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.instant-document-view.small,
+.instant-video-view.small,
+.instant-image-view.small {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.small .instant-document-view-content,
+.small .instant-video-view video,
+.small .instant-image-view .instant-image-view-image {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.small .instant-document-view-icon .icon-root {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.small .instant-document-view-name {
+  font-size: $font-size-s;
+  margin: 0 $spacing;
+  line-height: 20px;
+  display: none;
+}
+
+.small .instant-document-view-icon {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 8px 20px 0 !important;
+}
+.small .instant-image-view-image{
+  width: 64px !important;
+  height: 64px !important;
+}
+.small video{
+  width: 64px !important;
+  height: 64px !important;
+}
+.small.instant-video-view > .icon-root,
+.small.instant-image-view > .icon-root {
+  width: 24px !important;
+  height: 24px !important;
+  padding: 20px !important;
+}

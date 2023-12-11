@@ -1,0 +1,92 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.image-field-view.image-field-view-W15H10 .image-field-view-image-container {
+  width: 90px;
+}
+
+.image-field-view.image-field-view-W15H10 .image-field-view-content {
+  width: calc(100% - 110px);
+}
+
+.image-field-view.image-field-view-W10H10 .image-field-view-image-container {
+  width: 60px;
+}
+
+.image-field-view.image-field-view-W10H10 .image-field-view-content {
+  width: calc(100% - 80px);
+}
+
+.image-field-view-image-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: $button-border-radius;
+  border: 2px dashed $line;
+  background: $background;
+  -webkit-appearance: none;
+  outline: none;
+  text-align: start;
+  transition: border 0.3s ease;
+  resize: vertical;
+  height: 60px;
+}
+
+
+.image-field-view-image-container:focus,
+.image-field-view-image-container:active,
+.image-field-view-image-container:hover {
+  background: $white;
+  border-color: $accent;
+}
+
+.image-field-view-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.image-field-view-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+}
+
+.image-field-view-content {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 $spacing;
+}
+
+.image-field-view-image-placeholder {
+  margin: 0;
+  text-align: center;
+  font-size: $font-size-s;
+  color: $text-placeholder;
+  line-height: 100%;
+  flex: 1;
+}
+
+.image-field-view-remove {
+  margin: 0;
+  font-size: $font-size-s;
+  flex: 1;
+  text-decoration: underline;
+  color: $danger;
+}
+
+.image-field-view-remove:hover{
+  cursor: pointer;
+}

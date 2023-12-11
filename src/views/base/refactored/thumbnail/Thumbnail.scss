@@ -1,0 +1,58 @@
+@import "../../../../assets/dimen";
+@import "../../../../assets/color";
+
+
+.thumbnail {
+  margin: $spacing;
+  border-radius: $button-border-radius;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  font-size: $font-size-xs;
+  max-width: 48px;
+}
+.thumbnail.round{
+  border-radius: 50%;
+}
+
+.thumbnail.large {
+  width: 72px !important;
+  height: 72px !important;
+  max-width: 72px !important;
+
+}
+.thumbnail.xxlarge {
+  width: 200px !important;
+  height: 200px !important;
+  max-width: 200px !important;
+
+}
+
+.thumbnail .icon-root {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.thumbnail.large .icon-root {
+  width: 72px !important;
+  height: 72px !important;
+  display: block;
+}
+
+.thumbnail.primary .icon-root {
+  fill: $primary;
+}
+.thumbnail.accent .icon-root {
+  fill: $accent;
+}
+
+.thumbnail.danger .icon-root {
+  fill: $danger;
+}
+
+.thumbnail.small {
+  width: 32px;
+  height: 32px;
+}
+

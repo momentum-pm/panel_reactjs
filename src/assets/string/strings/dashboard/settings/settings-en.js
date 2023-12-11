@@ -1,0 +1,21 @@
+export const settingsEn = {
+	navigation_title: 'Settings',
+	toolbar_title: 'Settings',
+	toolbar_subtitle: 'Manage your profile!',
+
+	form_title: 'Edit settings',
+	first_name_placeholder: 'First name...',
+	first_name_label: 'First Name',
+	last_name_placeholder: 'Last Name...',
+	last_name_label: 'Last Name',
+	email_placeholder: 'Email...',
+	email_label: 'Email',
+	phone_number_placeholder: 'Mobile number...',
+	phone_number_label: 'Mobile',
+	picture_label:'Profile Picture',
+	picture_placeholder:'Click on the square to select or drop your profile picture inside it',
+	save:'Save',
+	other_settings:'Other features',
+	change_password:'Change Password',
+	logout:'Logout',
+};

@@ -1,0 +1,151 @@
+@import "../../../../assets/color";
+@import "../../../../assets/dimen";
+
+.hidden-field{
+  display: none;
+}
+.field {
+  padding: 0 $spacing;
+  margin: $spacing $spacing 0;
+  width: calc(100% - #{$spacing-four});
+}
+.field.inline-field{
+  width: unset !important;
+  margin: $spacing !important;
+}
+.field-icon {
+  width: $icon-size;
+  height: $icon-size;
+}
+
+.field-icon .icon-root {
+  display: block;
+  width: $icon-size;
+  height: $icon-size;
+}
+
+.fa .field-icon {
+  margin-left: $spacing;
+}
+
+.en .field-icon {
+  margin-right: $spacing;
+}
+
+.half-column.field {
+  width: calc(50% - #{$spacing-four});
+  flex: calc(50% - #{$spacing-four});
+}
+
+
+.field-label {
+  font-weight: 600;
+  font-size: $font-size-s;
+  user-select: none;
+  color: $text-placeholder;
+  flex: 1;
+}
+
+
+.field-hint,
+.field-error {
+  color: $text-secondary;
+  margin: 0;
+  line-height: 24px;
+  position: relative;
+}
+
+
+.field-hint-bullet,
+.field-error-bullet {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  line-height: 14px;
+  text-align: center;
+  border: 1px solid;
+}
+
+.field-hint-bullet {
+  color: $info !important;
+  cursor: help;
+  font-family: Azarmehr, serif;
+  border-color: $info;
+}
+
+.field-error-bullet {
+  color: $danger !important;
+  border-color: $danger;
+}
+
+.field-hint-text,
+.field-error-text {
+  font-size: $font-size-s;
+  margin: 0 $spacing-half;
+  line-height: 24px;
+  position: absolute;
+  left: 16px;
+  text-align: end;
+  top: -4px;
+  z-index: 3;
+  white-space: nowrap;
+}
+
+.field-error-text {
+  color: $danger !important;
+
+}
+
+.field-hint-text {
+  color: $white;
+  background: $info-darker;
+  display: none;
+  padding: 0 $spacing;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.field-hint-bullet:hover ~ .field-hint-text {
+  display: block;
+}
+
+.field.always-show-hint .field-hint-text{
+  display: block !important;
+}
+.compact-form .field, .compact-form.field {
+  padding: 0;
+  margin: 0 $spacing;
+  width: calc(100% - #{$spacing-two});
+
+}
+
+.invisible-field * {
+  display: none !important;
+}
+
+.disabled-field::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  cursor: not-allowed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.field.danger .field-label,
+.field.danger .field-label .primary {
+  color: $danger !important;
+}
+
+.field:hover .select-field-view-input {
+  border-color: $accent;
+}
+
+.half-column-field {
+  display: inline-block !important;
+  flex: calc(50% - 32px) !important;
+}

@@ -1,0 +1,145 @@
+@import "../../../assets/dimen";
+@import "../../../assets/color";
+
+.tag-view {
+  border-radius: 8px;
+  height: 32px;
+  background: $background;
+  width: fit-content;
+  margin: $spacing;
+  padding: 0 $spacing;
+}
+
+
+.dark .tag-view {
+  background: $black-dark;
+}
+
+.tag-view.transparent {
+  background: none !important;
+}
+
+.tag-view.low-margin {
+  height: 24px;
+  margin: $spacing-half $spacing;
+}
+
+.tag-view.no-margin {
+  margin: 0 !important;
+}
+
+.tag-view .icon-root {
+  fill: $gray !important;
+}
+
+
+.fa .tag-view .icon-root {
+  margin-left: $spacing;
+}
+
+.en .tag-view .icon-root {
+  margin-right: $spacing;
+}
+
+.tag-view-title {
+  //opacity:0.7;
+  font-size: $font-size-s;
+  line-height: 16px;
+  color: $gray;
+}
+
+.tag-view.primary .tag-view-title {
+  color: $primary !important;
+}
+
+.tag-view.primary .icon-root {
+  fill: $primary !important;
+}
+
+.tag-view.colored.primary {
+  background: $primary !important;
+}
+
+.tag-view.tinted.primary {
+  background: $primary-background !important;
+}
+
+.tag-view.secondary .tag-view-title {
+  color: $secondary !important;
+}
+
+.tag-view.secondary .icon-root {
+  fill: $secondary !important;
+}
+
+.tag-view.colored.secondary {
+  background: $secondary !important;
+}
+
+.tag-view.tinted.secondary {
+  background: $secondary-background !important;
+}
+
+.tag-view.accent .tag-view-title {
+  color: $accent !important;
+}
+
+.tag-view.accent .icon-root {
+  fill: $accent !important;
+}
+
+.tag-view.colored.accent {
+  background: $accent !important;
+}
+.tag-view.tinted.accent {
+  background: $accent-background !important;
+}
+
+
+.tag-view.success .tag-view-title {
+  color: $success !important;
+}
+
+.tag-view.success .icon-root {
+  fill: $success !important;
+}
+
+.tag-view.colored.success {
+  background: $success !important;
+}
+.tag-view.tinted.success {
+  background: $success-background !important;
+}
+
+
+
+.tag-view.danger .tag-view-title {
+  color: $danger !important;
+}
+
+.tag-view.danger .icon-root {
+  fill: $danger !important;
+}
+
+.tag-view.colored.danger {
+  background: $danger !important;
+}
+.tag-view.tinted.danger {
+  background: $danger-background !important;
+}
+.tag-view.tinted .tag-view-title{
+  opacity: 0.9;
+}
+.tag-view.colored {
+  background: $gray;
+  //box-shadow: $tag-shadow;
+}
+
+.tag-view.colored .tag-view-title {
+  color: $white !important;
+}
+
+.tag-view.colored .icon-root {
+  fill: $white !important;
+}
+

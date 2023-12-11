@@ -1,0 +1,130 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+.switch-field-view {
+  position: relative;
+  user-select: none !important;
+}
+.switch-field-view * {
+  user-select: none !important;
+}
+.switch-field-view-label {
+  color: $text-secondary;
+  font-size: $font-size-m;
+  margin: $spacing-two 0;
+  line-height: 24px;
+}
+
+.switch-field-view-field-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 54px;
+  height: 32px;
+}
+
+.switch-field-view-title.checked {
+  color: $primary;
+}
+
+.switch-field-view-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-field-view-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $background;
+  box-shadow: $inner-shadow;
+  transition: $transition-all;
+  border-radius: 16px;
+}
+
+.switch-field-view-icon {
+  position: absolute;
+  top: 4px;
+  // z-index: 1;
+  bottom: 4px;
+  width: 16px;
+  height: 16px;
+}
+.switch-field-view-icon.off {
+  left: 18px;
+}
+.switch-field-view-icon.on {
+  right: -6px;
+}
+.switch-field-view-icon.on .icon-root {
+  fill: $white !important;
+  stroke: $white !important;
+}
+
+.switch-field-view-icon.off .icon-root {
+  fill: $icon-color !important;
+  stroke: $icon-color !important;
+}
+.switch-field-view-icon .icon-root {
+  width: 16px !important;
+  height: 16px !important;
+}
+.dark-mode .switch-field-view-slider{
+  background-color: $black-light;
+}
+
+.dark .switch-field-view-slider {
+  background-color: $primary-transparent;
+}
+.dark .switch-field-view-icon.off .icon-root,
+.dark-mode .switch-field-view-icon.off .icon-root {
+  fill: $white !important;
+  stroke: $white !important;
+}
+.switch-field-view-slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  bottom: 4px;
+  background-color: white;
+  box-shadow: $box-shadow;
+  transition: $transition-all;
+  border-radius: 50%;
+}
+.dark .switch-field-view-slider::before {
+  background-color: $black-light;
+}
+.en .switch-field-view-slider:before {
+  left: 4px;
+}
+.fa .switch-field-view-slider:before {
+  right: 4px;
+}
+
+.switch-field-view-input:checked + .switch-field-view-slider {
+  background-color: $primary;
+}
+
+.en .switch-field-view-input:checked + .switch-field-view-slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(16px);
+  transform: translateX(24px);
+}
+.fa .switch-field-view-input:checked + .switch-field-view-slider:before {
+  -webkit-transform: translateX(-22px);
+  -ms-transform: translateX(-22px);
+  transform: translateX(-22px);
+}
+.switch-field-view .icon-root {
+  width: $icon-size;
+  height: $icon-size;
+  margin: 4px 12px;
+  display: inline-block;
+  vertical-align: top;
+  fill: $primary;
+  stroke: $primary;
+}

@@ -1,0 +1,63 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.search-field-view {
+  width: 250px;
+  height: 48px;
+  background: $background-light;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.3s linear;
+  border-radius: 24px;
+  align-items: center;
+}
+.search-field-view input {
+  resize: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+  padding: 0;
+  color: $white;
+  -webkit-appearance: none;
+  height: 100%;
+}
+.search-field-view:active,
+.search-field-view:focus {
+  background: transparent;
+}
+.search-field-view {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    background: transparent;
+  }
+}
+.search-field-view input::-webkit-search-decoration,
+.search-field-view input::-webkit-search-cancel-button,
+.search-field-view input::-webkit-search-results-button,
+.search-field-view input::-webkit-search-results-decoration {
+  display: none;
+}
+.search-field-view .icon-root {
+  stroke: $icon;
+  opacity: 0.7;
+  margin: $spacing-two;
+}
+
+.search-field-view:focus-within {
+  background: $background-light;
+}
+.dark {
+  .search-field-view {
+    background: $black-light;
+  }
+
+  .search-field-view:focus-within {
+    background: $black-mid;
+  }
+  .search-field-view .icon-root {
+    stroke: $white !important;
+  }
+}

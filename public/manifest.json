@@ -1,0 +1,10 @@
+{
+  "short_name": "greenoly",
+  "name": "greenoly",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#37b5e8",
+  "background_color": "#ffffff"
+}

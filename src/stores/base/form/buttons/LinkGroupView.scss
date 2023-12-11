@@ -1,0 +1,100 @@
+@import "../../../../assets/color";
+@import "../../../../assets/dimen";
+
+.link-group-view {
+}
+
+.link-group-item {
+}
+
+.link-group-item-active {
+}
+
+.link-group-view.raised {
+  background: $white;
+  border-radius: $button-border-radius;
+  margin: $spacing;
+  width: fit-content;
+}
+.link-group-view.raised .link-group-items {
+  display: flex;
+  padding: $spacing;
+}
+
+.link-group-view.raised .link-group-item {
+  width: 32px;
+  text-align: center;
+  line-height: 32px;
+  padding: 0 $spacing;
+  margin: 0 $spacing;
+  border-radius: $button-border-radius;
+  color: $primary;
+  transition: $transition-all;
+}
+.link-group-view.raised .link-group-item-indicator {
+  line-height: 32px;
+  padding: 0 $spacing;
+  margin: 0 $spacing;
+  color: $text-color;
+}
+.link-group-view.raised .link-group-item:hover {
+  background: $background-light;
+}
+.dark {
+  .link-group-view.raised .link-group-item:hover {
+    background: $black-light;
+  }
+  .link-group-view.raised .link-group-item-indicator {
+    color: $white;
+  }
+}
+
+.link-group-view.raised .link-group-item-active {
+  background: $primary !important;
+  color: $white !important;
+}
+.link-group-view.raised {
+  max-width: calc(100% - 16px);
+}
+.link-group-view.raised .link-group-items {
+  overflow: auto;
+  display: flex;
+  padding: $spacing;
+  max-width: calc(100% - 16px);
+  flex-wrap: nowrap;
+}
+
+.link-group-view.raised .link-group-item {
+  min-width: 16px !important;
+}
+
+.link-group-view.responsive-pinned-bottom .link-group-items::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 767px) {
+  .link-group-view.responsive-pinned-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    border-top: $border;
+    border-radius: 0;
+    z-index: 10;
+    max-width: 100%;
+    box-shadow: $box-shadow;
+  }
+  .with-responsive-pinned-bottom {
+    margin-bottom: 49px;
+  }
+
+  .link-group-view.responsive-pinned-bottom {
+    overflow: hidden;
+    width: 100%;
+    display: block;
+  }
+}
+.dark .link-group-view.raised {
+  background: $black-mid;
+}

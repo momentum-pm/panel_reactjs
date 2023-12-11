@@ -1,0 +1,109 @@
+@import "../../../../../assets/dimen";
+@import "../../../../../assets/color";
+
+.step-view.invisible-field {
+  display: none;
+}
+
+.step-view {
+  padding: $spacing;
+  width: calc(100% - #{$spacing-two}) !important;
+}
+
+.step-view.long-white-space {
+  margin-top: 32px;
+}
+
+.step-view.long-white-space:first-of-type {
+  margin-top: 0;
+}
+
+.step-view-index {
+  width: 32px;
+  height: 32px;
+  background: $primary-darker;
+  border-radius: 50%;
+  margin: $spacing-two 0 $spacing;
+  color: $white;
+  line-height: 32px;
+  font-size: $font-size-xl;
+  text-align: center;
+}
+
+.step-view-title {
+  margin: $spacing-two $spacing $spacing;
+  color: $primary;
+  font-size: $font-size-xl;
+  flex: 1;
+ 
+}
+
+
+.step-link-view {
+  padding: $spacing $spacing-two;
+  border-radius: $button-border-radius;
+  width: calc(100% - #{$spacing-four}) !important;
+  transition: $transition-all;
+  cursor: pointer;
+}
+
+.step-link-view:first-of-type {
+  margin-top: $spacing-two;
+}
+
+.step-link-view:hover {
+  background: $background;
+}
+
+.step-link-view-index {
+  width: 24px;
+  height: 24px;
+  border: 1px solid $line;
+  border-radius: 50%;
+  margin: $spacing 0;
+  transition: $transition-all;
+  color: $icon;
+  line-height: 24px;
+  font-size: $font-size-l;
+  text-align: center;
+}
+
+.step-link-view-title {
+  margin: $spacing;
+  color: $text-secondary;
+  transition: $transition-all;
+  font-size: $font-size-m;
+  flex: 1;
+}
+
+.step-link-view-icon {
+  opacity: 0;
+  transition: $transition-all;
+}
+
+.step-link-view-icon .icon-root {
+  display: block;
+  fill: $accent;
+}
+
+.step-link-view-ok .step-link-view-icon {
+  opacity: 1;
+}
+
+.step-link-view-ok .icon-root {
+  fill: $icon;
+}
+
+.step-link-view-valid .step-link-view-title {
+  color: $primary;
+}
+
+.step-link-view-valid .step-link-view-index {
+  border: 1px solid $primary;
+  color: $white;
+  background: $primary;
+}
+
+.step-link-view-valid .step-link-view-icon {
+  opacity: 1;
+}

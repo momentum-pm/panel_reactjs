@@ -1,0 +1,343 @@
+@import "../../../../assets/color";
+@import "../../../../assets/dimen";
+.button-view.hidden{
+  display: none !important;
+}
+$button-sizes: (
+  (
+    name: "default",
+    height: 40px,
+    font-size: 0.8rem,
+    side-padding: 8px,
+    icon-size: 24px,
+  ),
+  (
+    name: "large",
+    height: 48px,
+    font-size: 0.9rem,
+    side-padding: 16px,
+    icon-size: 24px,
+  ),
+  (
+    name: "small",
+    height: 32px,
+    font-size: 0.8rem,
+    side-padding: 8px,
+    icon-size: 16px,
+  )
+);
+
+.button-view {
+  //default size
+  $default-size: nth($button-sizes, 1);
+  height: map_get($default-size, "height");
+
+  .button-view-title {
+    font-size: map_get($default-size, "font-size");
+    margin: 0 map_get($default-size, "side-padding");
+  }
+
+  .icon-root {
+    margin: 0;
+    width: map_get($default-size, "icon-size");
+    height: map_get($default-size, "icon-size");
+  }
+
+  .button-view-content {
+    padding: 0 map_get($default-size, "side-padding");
+  }
+
+  // size variables
+  @each $button-size in $button-sizes {
+    &.#{map_get($button-size,"name")} {
+      height: map_get($button-size, "height");
+
+      .button-view-title {
+        font-size: map_get($button-size, "font-size");
+        margin: 0 map_get($button-size, "side-padding");
+      }
+
+      .icon-root {
+        margin: 0;
+        width: map_get($button-size, "icon-size");
+        height: map_get($button-size, "icon-size");
+      }
+
+      .button-view-content {
+        padding: 0 map_get($button-size, "side-padding");
+      }
+    }
+  }
+
+  border-radius: 10px;
+
+  margin: $spacing;
+  position: relative;
+  display: block;
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+  transition: $transition-all;
+  outline: none;
+
+  overflow: hidden;
+
+  &.has-about {
+    overflow: visible !important;
+  }
+
+  cursor: pointer;
+
+  &.button-view-disabled {
+    cursor: not-allowed !important;
+  }
+
+  &.button-view-loading {
+    cursor: wait !important;
+  }
+
+  &.has-about {
+    cursor: pointer !important;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    border: none;
+    outline: none !important;
+    -webkit-appearance: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &.button-view-disabled input {
+    cursor: not-allowed !important;
+  }
+
+  &.button-view-loading input {
+    cursor: wait !important;
+  }
+
+  &.has-about input {
+    cursor: pointer !important;
+  }
+
+  .button-view-content {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    margin: auto;
+    width: fit-content;
+  }
+  &.start-aligned {
+    .button-view-content {
+      margin: unset !important;
+    }
+  }
+
+  .button-view-title {
+    user-select: none;
+  }
+
+  &.raised {
+    .icon-root * {
+      fill: $white;
+    }
+
+    .icon-root.ripple-loading * {
+      fill: none !important;
+      stroke: $white;
+    }
+
+    .button-view-title {
+      color: $white;
+      font-weight: 500;
+    }
+
+    // color variables
+    @each $color in $colors {
+      //default color
+      &.#{map_get($color, "name")} {
+        background: map_get($color, "default");
+      }
+      //hovered color
+      &.#{map_get($color, "name")}:hover {
+        background: map_get($color, "dark");
+      }
+      &.button-view-disabled.#{map_get($color, "name")} {
+        background: map_get($color, "disabled") !important;
+      }
+      &.button-view-loading.#{map_get($color, "name")} {
+        background: map_get($color, "light") !important;
+      }
+    }
+  }
+
+  &.flat {
+    // color variables
+    @each $color in $colors {
+      &.#{map_get($color, "name")} .icon-root * {
+        fill: map_get($color, "default");
+      }
+      &.#{map_get($color, "name")} .icon-root.ripple-loading * {
+        fill: none !important;
+        stroke: map_get($color, "default");
+      }
+      &.#{map_get($color, "name")} .button-view-title {
+        color: map_get($color, "default");
+        font-weight: 500;
+      }
+      //hovered color
+      &.#{map_get($color, "name")}:hover {
+        background: map_get($color, "background");
+      }
+
+      &.button-view-disabled.#{map_get($color, "name")} .button-view-title {
+        color: map_get($color, "disabled") !important;
+      }
+      &.button-view-disabled.#{map_get($color, "name")} .icon-root * {
+        fill: map_get($color, "disabled") !important;
+        stroke: map_get($color, "disabled") !important;
+      }
+      &.button-view-disabled.#{map_get($color, "name")}
+        .icon-root.ripple-loading
+        * {
+        stroke: map_get($color, "disabled");
+      }
+    
+    }
+  }
+
+  &.bordered {
+    // color variables
+    @each $color in $colors {
+      &.#{map_get($color, "name")} {
+        border: 1px solid map_get($color, "default");
+      }
+      &.#{map_get($color, "name")} .icon-root * {
+        fill: map_get($color, "default");
+      }
+      &.#{map_get($color, "name")} .icon-root.ripple-loading * {
+        fill: none !important;
+        stroke: map_get($color, "default");
+      }
+      &.#{map_get($color, "name")} .button-view-title {
+        color: map_get($color, "default");
+        font-weight: 500;
+      }
+      //hovered color
+      &.#{map_get($color, "name")}:hover {
+        background: map_get($color, "background");
+      }
+      &.button-view-disabled.#{map_get($color, "name")} .button-view-title {
+        color: map_get($color, "disabled") !important;
+      }
+      &.button-view-disabled.#{map_get($color, "name")} {
+        border: 1px solid map_get($color, "disabled");
+      }
+      &.button-view-disabled.#{map_get($color, "name")} .icon-root * {
+        fill: map_get($color, "disabled");
+      }
+      &.button-view-disabled.#{map_get($color, "name")}
+        .icon-root.ripple-loading
+        * {
+        stroke: map_get($color, "disabled");
+      }
+      &.button-view-disabled.#{map_get($color, "name")}:hover {
+        background: unset !important;
+      }
+      &.button-view-loading.#{map_get($color, "name")} {
+        background: map_get($color, "background") !important;
+      }
+    }
+
+    @each $button-size in $button-sizes {
+      &.#{map_get($button-size,"name")} {
+        height: calc(#{map_get($button-size, "height")} - 2px) !important;
+      }
+    }
+    //default size
+    $default-size: nth($button-sizes, 1);
+
+    & {
+      height: calc(#{map_get($default-size, "height")} - 2px) !important;
+    }
+  }
+}
+.dark .button-view {
+  &.flat {
+    // color variables
+    @each $color in $dark-colors {
+      &.#{map_get($color, "name")} .button-view-title {
+        color: map_get($color, "default");
+      }
+      &.#{map_get($color, "name")} .icon-root * {
+        fill: map_get($color, "default");
+      }
+      &.#{map_get($color, "name")} .button-view-title {
+        color: map_get($color, "default");
+      }
+      //hovered color
+      &.#{map_get($color, "name")}:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+  &.bordered {
+    // color variables
+    @each $color in $dark-colors {
+      //hovered color
+      &.#{map_get($color, "name")}:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+}
+.button-view.center {
+  margin: $spacing auto;
+}
+
+.button-view.full {
+  display: block;
+  flex: 100%;
+}
+
+.button-view.circle {
+  border-radius: 50% !important;
+  box-shadow: $outer-shadow-magic;
+}
+.button-view.circle .button-view-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 0 !important;
+  box-shadow: $inner-shadow-magic;
+}
+.button-view.circle.large {
+  width: 120px !important;
+  height: 120px !important;
+  margin: 32px !important;
+}
+.button-view.circle.large .icon-root {
+  width: 64px !important;
+  height: 64px !important;
+  margin: auto !important;
+  opacity: 0.8;
+}
+.button-view.small-icon{
+  .icon-root{
+    width: 16px !important;
+    height: 16px !important;
+    margin: 4px;
+  }
+}
+.button-view.white.bordered{
+  border-color: $white;
+  border: 1px solid $white;
+}
+.button-view.white:hover{
+  background-color: rgba(255,255,255,0.1);
+}

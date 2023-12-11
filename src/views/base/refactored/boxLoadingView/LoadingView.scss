@@ -1,0 +1,59 @@
+@import "../../../../assets/color";
+@import "../../../../assets/dimen";
+.loading-view-loading-container{
+  padding: $spacing 0 0;
+}
+.loading-view-loading-bullet-container {
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+}
+
+.loading-view-loading-bullet {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  background: $primary;
+  border-radius: 50%;
+  animation: loading-view-loading-bullet-bounce 1s linear infinite;
+}
+
+.loading-view-loading-bullet-container:nth-of-type(2) .loading-view-loading-bullet {
+  animation-delay: 0.2s;
+}
+
+.loading-view-loading-bullet-container:nth-of-type(3) .loading-view-loading-bullet {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading-view-loading-bullet-bounce {
+  0% {
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+  }
+  30% {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+  }
+  50% {
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+  }
+  100% {
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+  }
+}
+
+
+.loading-view-text {
+  text-align: center;
+  font-size: $font-size-s;
+  color: $text-secondary;
+  margin: $spacing-half 0 0;
+}
+

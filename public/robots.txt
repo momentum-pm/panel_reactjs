@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /dashboard/
+Disallow: /auth/
+Disallow: /blog/authors/
+Disallow: /school/authors/
+Crawl-delay: 10
+Sitemap: https://greenoly.org/sitemap.xml

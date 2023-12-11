@@ -1,0 +1,11 @@
+@import "../../../../assets/color";
+@import "../../../../assets/dimen";
+
+.box .form-title{
+  border-top-right-radius: $box-border-radius;
+  border-top-left-radius: $box-border-radius;
+}
+.form-title {
+  margin: 0;
+  padding: $spacing-two;
+}

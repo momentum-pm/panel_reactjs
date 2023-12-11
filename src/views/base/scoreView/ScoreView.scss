@@ -1,0 +1,38 @@
+@import "../../../assets/color";
+@import "../../../assets/dimen";
+
+
+.score-view-step {
+  background: $background;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 2px;
+  box-shadow: $inner-shadow;
+  transition: $transition-all;
+}
+
+.score-view-step.score-view-step-filled {
+  background: $accent !important;
+}
+
+.score-view-step.score-view-step-hidden {
+  opacity: 0;
+}
+
+.score-view-content {
+  padding: 2px;
+  height: 20px;
+}
+
+.score-view-content.small .score-view-step {
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+}
+
+.score-view-content.small {
+  padding: 2px;
+  height: 12px;
+}

@@ -1,0 +1,135 @@
+@import "../../../assets/dimen";
+@import "../../../assets/color";
+
+.message-queue-view {
+  position: fixed;
+  padding: $spacing;
+  bottom: 0;
+  z-index: 100000000;
+}
+
+.en .message-queue-view {
+  right: 0;
+}
+
+.fa .message-queue-view {
+  left: 0;
+}
+
+.message-queue-item-view {
+  border-radius: $box-border-radius;
+  width: 300px;
+  margin: $spacing;
+  position: relative;
+  transition: all 0.3s ease;
+  animation: message-slide-in 0.3s ease;
+  overflow: hidden;
+}
+
+.message-queue-item-view .bar {
+  height: 8px;
+  background: #000000;
+  opacity: 0.2;
+  width: 100%;
+}
+
+.en .message-queue-item-view .bar {
+  animation: message-queue-bar-en 9s linear;
+}
+
+.fa .message-queue-item-view .bar {
+  animation: message-queue-bar-fa 9s linear;
+}
+
+@keyframes message-queue-bar-en {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+
+@keyframes message-queue-bar-fa {
+  0% {
+    margin-right: 0;
+  }
+  100% {
+    margin-right: -100%;
+  }
+}
+
+@keyframes message-slide-in {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.message-queue-item-view p {
+  padding: 12px;
+  color: $white;
+  margin: 0;
+  line-height: 24px;
+  font-size: $font-size-m;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 72px);
+}
+
+.message-queue-item-view .icon-button {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.message-queue-item-view.primary {
+  background: $primary;
+  box-shadow: $box-shadow-primary;
+}
+.message-queue-item-view.secondary {
+  background: $secondary;
+  box-shadow: $box-shadow-secondary;
+}
+.message-queue-item-view.accent {
+  background: $accent;
+  box-shadow: $box-shadow-accent;
+}
+
+.message-queue-item-view.success {
+  background: $success;
+  box-shadow: $box-shadow-success;
+}
+
+.message-queue-item-view.danger {
+  background: $danger;
+}
+
+.message-queue-item-view.uncolored {
+  background: $text;
+  box-shadow: $box-shadow-bold;
+}
+
+@media (max-width: 767px) {
+  @keyframes message-slide-in {
+    0% {
+      bottom: -56px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+
+  .message-queue-item-view {
+    width: calc(100% - #{$spacing-two}) !important;
+    margin: $spacing !important;
+    animation: message-slide-in 0.3s ease;
+  }
+  .message-queue-view {
+    left: 0;
+    right: 0;
+    bottom: 56px;
+    padding: 0 !important;
+  }
+}

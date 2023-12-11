@@ -1,0 +1,31 @@
+@import "../../../../../assets/dimen";
+@import "../../../../../assets/color";
+
+.privacy-policy {
+  padding: $spacing-four 135px;
+}
+@media (max-width: 767px) {
+  .privacy-policy{
+	padding: $spacing-four $spacing-two;
+  }
+}
+
+.privacy-policy-title {
+  text-align: center;
+  padding: $spacing-two;
+}
+
+.privacy-policy-text {
+
+  text-align: justify;
+  padding: $spacing-two;
+}
+
+.privacy-policy-item {
+  padding-bottom: $spacing-two;
+}
+
+.privacy-policy-item-text {
+  text-align: justify;
+  padding: 0 $spacing-two;
+}

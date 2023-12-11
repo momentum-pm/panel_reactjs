@@ -1,0 +1,18 @@
+@import "../../../../assets/dimen";
+@import "../../../../assets/color";
+
+
+.item {
+  // border-bottom: 1px solid $line;
+  padding: $spacing;
+  width: 100%;
+}
+
+.item.clickable {
+  transition: $transition-all;
+  cursor: pointer;
+}
+
+.item.clickable:hover {
+  background: $background-light;
+}

@@ -1,0 +1,46 @@
+export const COLOR = {
+	PRIMARY_DARK: '#495f6e',
+	PRIMARY: '#38A2FF',
+	SUCCESS: '#00A959',
+	WARNING: '#FF8533',
+	DANGER: '#FF3333',
+	TEXT: '#27333b',
+	TEXT_SECONDARY: '#3D4853',
+	TEXT_PLACEHOLDER: '#999999',
+	ICON: '#808080',
+	LINE: '#EAEAEA',
+	BACKGROUND: '#EFF4F7',
+	BACKGROUND_LIGHT: '#f5fafc',
+	WHITE: '#FFFFFF',
+	color_0: '#82C3F4',
+	color_1: '#38A1F2',
+	color_2: '#2C7FBF',
+	color_3: '#1A4C73',
+	color_4: '#12334d',
+
+
+	BLUE: '#3F51B5',
+	RED: '#F44336',
+	GREEN: '#4CAF50',
+	TEAL: '#009688',
+	ORANGE: '#FF5722',
+	YELLOW: '#FF9800',
+	PINK: '#E91E63',
+	PURPLE: '#9C27B0',
+	GRAY: '#607D8B',
+};
+export const LIGHT_COLORS = {
+	BLUE: '#C5CAE9',
+	RED: '#FFCDD2',
+	GREEN: '#C8E6C9',
+	TEAL: '#B2DFDB',
+	ORANGE: '#FFCCBC',
+	YELLOW: '#FFE0B2',
+	PINK: '#F8BBD0',
+	PURPLE: '#E1BEE7',
+	GRAY: '#CFD8DC',
+}
+export const STROKE_STYLE = {
+	SOLID: [4, 0],
+	DASHED: [4, 4],
+};

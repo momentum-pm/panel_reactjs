@@ -1,0 +1,89 @@
+@import "../../../../../../assets/dimen";
+@import "../../../../../../assets/color";
+
+.knowledge-edit-view-item {
+  background: $background-light;
+  margin: $spacing;
+  overflow: hidden;
+  border-radius: $button-border-radius;
+  width: calc(50% - 16px);
+  position: relative;
+}
+
+.knowledge-edit-view-item .button-view {
+  margin: $spacing-half !important;
+}
+
+.knowledge-edit-view-content {
+
+}
+
+.knowledge-edit-view-loading {
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: wait;
+  top: 0;
+}
+
+@media (max-width: 767px) {
+
+  .knowledge-edit-view-item {
+	background: unset !important;
+	margin: 0;
+	border-radius: $button-border-radius;
+	width: 100%;
+  }
+}
+
+.knowledge-set-create-search-container {
+  position: relative;
+  margin: $spacing-two;
+}
+
+.knowledge-set-create-search-input {
+  width: calc(100% - 52px);
+  padding: $spacing $spacing-two;
+  z-index: 2;
+  line-height: 30px;
+  -webkit-appearance: none;
+  outline: none;
+  background: transparent;
+  display: block;
+  text-align: start;
+  transition: all 0.3s linear;
+  border: $field-border;
+  border-radius: $field-border-radius;
+  resize: none;
+}
+
+.fa .knowledge-set-create-search-input {
+  padding-right: $spacing-four;
+}
+
+.en .knowledge-set-create-search-input {
+  padding-left: $spacing-four;
+}
+
+.knowledge-set-create-search-input:focus,
+.knowledge-set-create-search-input:active,
+.knowledge-set-create-search-input:hover {
+  border-color: $accent;
+}
+
+.knowledge-set-create-search-loading {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 8px;
+  background: transparent;
+}
+
+.en .knowledge-set-create-search-loading {
+  left: 5px;
+}
+
+.fa .knowledge-set-create-search-loading {
+  right: 5px;
+}

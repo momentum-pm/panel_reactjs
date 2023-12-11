@@ -1,0 +1,202 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.checkbox-field-item {
+  font-size: $font-size-m;
+  color: $text;
+  margin: $spacing;
+  position: relative;
+  line-height: 18px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-field-item p {
+  flex: 1;
+}
+
+.compact-form .checkbox-field-item {
+  margin: 0;
+}
+
+.checkbox-field-item-input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox-field-item-check-container {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: $transition-all;
+}
+
+.checkbox-field-item-check {
+  height: 14px;
+  width: 14px;
+  margin: 11px;
+  border: $field-border;
+  border-radius: 2px;
+  transition: $transition-all;
+}
+
+.checkbox-field-item-check .icon-root {
+  fill: none;
+  width: 12px;
+  height: 12px;
+  margin: 1px;
+  top: 13px;
+}
+
+.bullet-field-label {
+  margin: 0 $spacing;
+}
+
+.checkbox-field-item:hover .checkbox-field-item-check-container {
+  background: $background-light;
+}
+
+.checkbox-field-item:hover .checkbox-field-item-check {
+  border-color: $accent;
+}
+
+.field.danger .checkbox-field-item-check {
+  border-color: $danger;
+}
+
+.checkbox-field-item-input:checked
+  ~ .checkbox-field-item-check-container
+  .checkbox-field-item-check {
+  background: $accent;
+  border-color: $accent !important;
+}
+
+.multi-select-field-error {
+  display: block;
+  font-size: $font-size-s;
+  color: $danger;
+  margin: 0 $spacing;
+}
+
+.checkbox-field-item.disabled .checkbox-field-item-input {
+  cursor: not-allowed;
+}
+
+.checkbox-field-item.disabled:hover .checkbox-field-item-check-container {
+  background: none !important;
+}
+
+.checkbox-field-item.disabled {
+  opacity: 0.4;
+}
+
+.checkbox-field-item.disabled:hover .checkbox-field-item-check {
+  border-color: $line !important;
+}
+
+.checkbox-field-item.tag {
+  margin: $spacing;
+}
+
+.checkbox-field-item.tag .checkbox-field-item-check-container {
+  display: none;
+}
+
+.checkbox-field-item.tag p {
+  padding: 0 $spacing-two;
+  background: $white;
+  //box-shadow: $box-shadow;
+  line-height: 34px;
+  transition: $transition-all;
+  color: $text-secondary;
+  border: 1px solid $line;
+  border-radius: $button-border-radius;
+  font-size: $font-size-s;
+}
+
+.checkbox-field-item.tag:hover p {
+  background: $background;
+}
+
+.checkbox-field-item.tag .checkbox-field-item-input:checked ~ p {
+  background: $primary;
+  color: $white;
+  border-color: $primary;
+}
+
+.scrollable-field .bullet-field-items {
+  height: 150px !important;
+  overflow-y: scroll;
+  margin: $spacing 0 0;
+  padding: 0 0 $spacing;
+  border: solid $line;
+  border-width: 0 0 1px;
+}
+
+@media (min-width: 768px) {
+  .scrollable-field .bullet-field-items::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .scrollable-field .bullet-field-items::-webkit-scrollbar {
+    width: 6px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .scrollable-field .bullet-field-items::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+
+  .scrollable-field .bullet-field-items::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    //box-shadow: $inner-shadow;
+    background: #aaa;
+  }
+}
+.dark .checkbox-field-item-check {
+  border: 1px solid #888;
+}
+
+.dark .checkbox-field-item:hover .checkbox-field-item-check-container {
+  background: $black-mid;
+}
+.dark .checkbox-field-item:hover .checkbox-field-item-check {
+  border-color: #888;
+}
+
+.checkbox-field-item-input:checked
+  ~ .checkbox-field-item-check-container
+  .checkbox-field-item-check
+  .icon-root {
+  fill: $white;
+}
+.checkbox-field-item.button-item {
+  margin: 0 8px !important;
+  padding: 0 16px;
+  height: 40px;
+  transition: $transition-all;
+  border-radius: $button-border-radius;
+  background: $black-mid;
+}
+
+.checkbox-field-item.button-item:hover{
+  background: $black-dark;
+}
+.checkbox-field-item.button-item.checked {
+  background: hsl(161, 71%, 29%);
+}
+
+.checkbox-field-item.button-item .checkbox-field-item-check-container{
+  display: none;
+}

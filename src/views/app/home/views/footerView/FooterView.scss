@@ -1,0 +1,61 @@
+@import "../../../../../assets/color";
+@import "../../../../../assets/dimen";
+
+.home-footer {
+  display: block;
+  width: 100%;
+  // border-top: 4px solid $primary;
+  padding: $spacing-eight 0 0;
+  background: $black-mid;
+  // background: linear-gradient( hsl(161, 10%, 10%), hsl(161, 10%, 10%));
+}
+
+.home-footer-title {
+  color: $background;
+  font-size: $font-size-m;
+}
+
+.home-footer-link {
+  color: $white;
+  display: block;
+  padding: $spacing;
+  margin: $spacing;
+  font-size: $font-size-m;
+  transition: $transition-all;
+  line-height: 32px;
+  border-radius: $button-border-radius;
+}
+
+.home-footer-link:hover {
+  background: $white-transparent;
+}
+
+.all-rights-reserved {
+  border-top: 4px solid $primary;
+  background: rgba(0, 0, 0, 0.3);
+  color: $white;
+}
+.footer-image-bottom{
+  margin: auto;
+  width: 200px;
+  display: block;
+}
+
+.footer-social-link {
+  margin: $spacing;
+  padding: $spacing-two;
+  border-radius: 50%;
+  transition: $transition-all;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-social-link .icon-root {
+  width: 24px;
+  height: 24px;
+  fill: $white;
+}
+
+.footer-social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

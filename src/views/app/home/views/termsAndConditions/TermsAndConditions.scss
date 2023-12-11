@@ -1,0 +1,31 @@
+@import "../../../../../assets/dimen";
+@import "../../../../../assets/color";
+
+.terms-and-conditions {
+  padding: $spacing-four 135px;
+}
+@media (max-width: 767px) {
+  .terms-and-conditions{
+	padding: $spacing-four $spacing-two;
+  }
+}
+
+.terms-and-conditions-title {
+  text-align: center;
+  padding: $spacing-two;
+}
+
+.terms-and-conditions-text {
+
+  text-align: justify;
+  padding: $spacing-two;
+}
+
+.terms-and-conditions-item {
+  padding-bottom: $spacing-two;
+}
+
+.terms-and-conditions-item-text {
+  text-align: justify;
+  padding: 0 $spacing-two;
+}

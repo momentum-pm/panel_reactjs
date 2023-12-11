@@ -1,0 +1,73 @@
+@import "../../../assets/dimen";
+@import "../../../assets/color";
+
+.file-icon-view {
+  margin: $spacing;
+}
+
+.file-icon-view-icon-container {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.file-icon-view-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.file-icon-view-background-icon {
+  box-shadow: $box-shadow-bold;
+}
+
+
+.file-icon-view-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.file-icon-view-icon .icon-root {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 14px 19px 8px;
+}
+
+.file-icon-view-icon {
+  height: 40px !important;
+}
+
+.file-icon-view-title {
+  margin: 0 !important;
+  line-height: 20px !important;
+  font-size: $font-size-s !important;
+  text-align: center;
+  color: $white;
+}
+
+.file-icon-view-name {
+  direction: ltr !important;
+  text-align: center;
+  line-height: 24px;
+  overflow: hidden;
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+  max-width: 56px;
+  white-space: nowrap;
+  color: $text;
+
+}
+
+.file-icon-view.white .file-icon-view-name {
+  color: $white !important;
+}
+
+.file-icon-view.free-width .file-icon-view-name {
+  max-width: unset;
+
+}

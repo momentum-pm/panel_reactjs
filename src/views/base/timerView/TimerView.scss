@@ -1,0 +1,86 @@
+@import "../../../assets/dimen";
+@import "../../../assets/color";
+
+.timer {
+  display: table;
+  margin: auto;
+}
+
+
+.timer-title {
+  margin: 0 $spacing $spacing;
+  font-size: $font-size-m;
+  text-align: center;
+  color: $primary;
+}
+
+.timer-data {
+  display: table;
+  margin: auto;
+}
+
+.timer-part {
+  display: inline-block;
+  width: 32px;
+  float: right;
+  vertical-align: top;
+  color: $text;
+}
+
+.timer-part-title {
+  display: block;
+  width: 100%;
+  line-height: 16px;
+  margin: 0;
+  text-align: center;
+  font-size: $font-size-s;
+}
+
+.timer-part-data {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-size: $font-size-xl;
+  text-align: center;
+  color: $primary;
+}
+
+.timer-split {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 $spacing;
+  float: right;
+  font-size: $font-size-xl;
+  text-align: center;
+  color: $text;
+}
+
+.timer.primary .timer-title,
+.timer.primary .timer-part-data {
+  color: $primary;
+}
+
+.timer.success .timer-title,
+.timer.success .timer-part-data {
+  color: $success;
+}
+
+.timer.warning .timer-title,
+.timer.warning .timer-part-data {
+  color: $danger;
+}
+
+.timer.danger .timer-title,
+.timer.danger .timer-part-data {
+  color: $danger;
+}
+
+.timer.white .timer-title{
+  color: $white;
+}
+
+
+.timer.white *{
+  color: $white;
+}
+
