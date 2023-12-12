@@ -77,11 +77,10 @@ export default class Auth extends Store {
   registerCallback(response, data) {
     if (Status.isOk(response.status)) {
       Analytics.logEvent("auth", "register");
-      this.login({});
+      this.login(data);
     } else {
-      MessageQueue.showObject(response.data);
-      let { phone_number } = data;
-      Register.get(phone_number, { phone_number }).submitDone();
+      MessageQueue.showObject(response._messages[0]);
+      Register.get().submitDone(data);
     }
   }
 

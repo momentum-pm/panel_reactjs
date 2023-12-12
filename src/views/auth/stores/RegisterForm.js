@@ -6,8 +6,10 @@ import Res from "../../../assets/Res";
 import Button from "../../../stores/base/form/buttons/Button";
 import Validators from "../../../utils/Validators";
 import Auth from "./Auth";
+import { STORE_TYPE } from "../../../stores/base/Store";
 export default class RegisterForm extends Form {
   static storeName = "RegisterForm";
+  static type = STORE_TYPE.SINGLETON;
 
   static getActions() {
     return [...super.getActions(), "submitDone"];
@@ -15,6 +17,12 @@ export default class RegisterForm extends Form {
 
   createFields() {
     return [
+      CharField.create({
+        name: "username",
+        placeholder: "your-user-name",
+        label: "Username",
+      }),
+
       CharField.create({
         name: "first_name",
         label: Res.string.auth.register.first_name_label,
@@ -67,7 +75,6 @@ export default class RegisterForm extends Form {
       this.getButton("submit").set_loading(true);
       Auth.get().register({
         ...this.getValues(),
-        phone_number: this.state.phone_number,
       });
     }
   }

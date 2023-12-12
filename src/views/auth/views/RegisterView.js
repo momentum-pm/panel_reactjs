@@ -5,8 +5,7 @@ import RegisterForm from "../stores/RegisterForm";
 
 class RegisterView extends FormView {
   static getForm(props) {
-    let phone_number = props.match.params.phone_number;
-    return RegisterForm.map(phone_number, { phone_number });
+    return RegisterForm.map();
   }
 }
 

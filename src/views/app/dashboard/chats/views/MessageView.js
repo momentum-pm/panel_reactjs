@@ -10,11 +10,10 @@ import {
 } from "../../../../../utils/DateUtils";
 import Row from "../../../../base/Row";
 import InstantFileIconView from "../../../../base/instantFileIconView/InstantFileIconView";
-import App from "../../../../../stores/app/App";
-
+import CallConfirmView from "./CallConfirmView";
 export default function MessageView({ message }) {
   let file;
-  let isSelf = !message.is_response;
+  let isSelf = message.type == "user";
   if (message.file && !message.blocked) {
     file = <InstantFileIconView fileAddress={message.file} />;
   }
@@ -29,17 +28,22 @@ export default function MessageView({ message }) {
       <img
         className="messenger-message-image"
         alt={"logo"}
-        src={message.is_response ? assistant : user}
+        src={message.type == "user" ? user : assistant}
       />
       <div>
         <div className={"messenger-message-content"}>
+          {message.calls?.reverse().map((item) => (
+            <CallConfirmView call={item} key={item.id} />
+          ))}
           <p
             className={`messenger-message-message ${
               message.blocked ? "messenger-inactive-message" : ""
             }`}
           >
-            {message.blocked
-              ? Res.string.dashboard.messenger.blocked_message
+            {message.type === "call" &&
+            message.call_answered &&
+            !message.content
+              ? "..."
               : message.content}
           </p>
           {file}

@@ -49,7 +49,7 @@ class AuthRouter extends StoreView {
                     <Suspense fallback={<LoadingView />}>
                       <Switch>
                         <Route
-                          path={`${path}:phone_number/register/`}
+                          path={`${path}register/`}
                           render={() => <RegisterView />}
                         />
                         <Route

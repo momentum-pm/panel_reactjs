@@ -19,7 +19,6 @@ export default class LoginPasswordForm extends Form {
 
       Button.create_button({
         name: "forget-password",
-        onClick: () => Auth.get().goTo(`${this.state.phone_number}/reset`),
         title: Res.string.auth.login.reset_password,
         className: "flat full-responsive",
       }),

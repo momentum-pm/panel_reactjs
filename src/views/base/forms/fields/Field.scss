@@ -1,7 +1,7 @@
 @import "../../../../assets/color";
 @import "../../../../assets/dimen";
 
-.hidden-field{
+.hidden-field {
   display: none;
 }
 .field {
@@ -9,7 +9,7 @@
   margin: $spacing $spacing 0;
   width: calc(100% - #{$spacing-four});
 }
-.field.inline-field{
+.field.inline-field {
   width: unset !important;
   margin: $spacing !important;
 }
@@ -37,7 +37,6 @@
   flex: calc(50% - #{$spacing-four});
 }
 
-
 .field-label {
   font-weight: 600;
   font-size: $font-size-s;
@@ -46,7 +45,6 @@
   flex: 1;
 }
 
-
 .field-hint,
 .field-error {
   color: $text-secondary;
@@ -54,7 +52,6 @@
   line-height: 24px;
   position: relative;
 }
-
 
 .field-hint-bullet,
 .field-error-bullet {
@@ -77,23 +74,49 @@
   color: $danger !important;
   border-color: $danger;
 }
-
 .field-hint-text,
 .field-error-text {
   font-size: $font-size-s;
   margin: 0 $spacing-half;
   line-height: 24px;
   position: absolute;
-  left: 16px;
   text-align: end;
   top: -4px;
   z-index: 3;
   white-space: nowrap;
 }
+.fa {
+  .field-hint-text,
+  .field-error-text {
+    font-size: $font-size-s;
+    margin: 0 $spacing-half;
+    line-height: 24px;
+    position: absolute;
+    left: 16px;
+    text-align: end;
+    top: -4px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+}
+
+.en {
+  .field-hint-text,
+  .field-error-text {
+    font-size: $font-size-s;
+    margin: 0 $spacing-half;
+    line-height: 24px;
+    position: absolute;
+    right: 16px;
+    text-align: end;
+    top: -4px;
+    z-index: 3;
+    white-space: nowrap;
+  }
+}
 
 .field-error-text {
   color: $danger !important;
-
 }
 
 .field-hint-text {
@@ -109,14 +132,14 @@
   display: block;
 }
 
-.field.always-show-hint .field-hint-text{
+.field.always-show-hint .field-hint-text {
   display: block !important;
 }
-.compact-form .field, .compact-form.field {
+.compact-form .field,
+.compact-form.field {
   padding: 0;
   margin: 0 $spacing;
   width: calc(100% - #{$spacing-two});
-
 }
 
 .invisible-field * {
@@ -124,7 +147,7 @@
 }
 
 .disabled-field::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;

@@ -30,6 +30,7 @@ class Router extends RemoteStoreView {
             <MasterScrollableColumn>
               <Switch>
                 <Route path={path + "chats/:thread/"} component={ThreadView} />
+                <Route path={path} component={SelectConversationView} />
               </Switch>
             </MasterScrollableColumn>
           </MasterColumn>

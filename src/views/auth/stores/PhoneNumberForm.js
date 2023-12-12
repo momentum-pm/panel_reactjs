@@ -45,6 +45,18 @@ export default class PhoneNumberForm extends Form {
         onClick: () => this.submit(),
         className: "raised primary full-responsive",
       }),
+      Button.createSubmit({
+        title: "Don't have an account?",
+        onClick: () => Auth.get().goTo(`register`),
+
+        className: "flat white full-responsive",
+      }),
+      // Button.createSubmit({
+      //   title: "Forgot your password?",
+      //   onClick: () => Auth.get().goTo(`$/reset`),
+
+      //   className: "flat white full-responsive",
+      // }),
     ];
   }
 

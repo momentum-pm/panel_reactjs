@@ -50,17 +50,21 @@ export default class Thread extends Store {
     this.load({}, LOADING_TYPE.INITIAL);
   }
 
-  loadNewer() {
+  loadNewer(inCall) {
     if (this.timer !== undefined) {
       clearTimeout(this.timer);
       this.timer = undefined;
     }
+
     if (this.state.messages.length > 0) {
       let newest_message = this.state.messages[0];
-      this.load(
-        { created_at__gt: newest_message.created_at },
-        LOADING_TYPE.NEWER
-      );
+      let params;
+      if (inCall) {
+        params = { created_at__gte: newest_message.created_at };
+      } else {
+        params = { created_at__gt: newest_message.created_at };
+      }
+      this.load(params, LOADING_TYPE.NEWER);
     } else {
       this.load({}, LOADING_TYPE.INITIAL);
     }
@@ -104,7 +108,10 @@ export default class Thread extends Store {
         };
       });
     }
-    let new_messages = [...this.state.messages, ...data];
+    let last_messages = this.state.messages.filter(
+      (message) => !data.some((m) => m.id === message.id)
+    );
+    let new_messages = [...last_messages, ...data];
     new_messages.sort(function (a, b) {
       if (a.created_at > b.created_at) return -1;
       if (a.created_at < b.created_at) return 1;
@@ -118,8 +125,15 @@ export default class Thread extends Store {
     this.state.messages = new_messages;
     setTimeout(() => this.setNewMessagesToFalse(), 300);
     this.save();
-    if (first_message && !first_message.is_response) {
+    if (first_message && first_message.type === "user") {
       this.timer = setTimeout(() => this.loadNewer(), 3000);
+    }
+    if (
+      first_message &&
+      first_message.type === "call" &&
+      first_message.call_answered
+    ) {
+      this.timer = setTimeout(() => this.loadNewer(true), 3000);
     }
   }
 
