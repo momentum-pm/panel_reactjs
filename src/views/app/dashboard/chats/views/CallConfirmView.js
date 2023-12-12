@@ -16,7 +16,7 @@ class CallConfirmView extends StoreView {
   }
   render() {
     return (
-      <div>
+      <div key={this.props.call.id}>
         <p>{this.props.store.state.call.question}</p>
         {!this.props.store.state.call.output ? (
           <Row className={"reverse"}>
